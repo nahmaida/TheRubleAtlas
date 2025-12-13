@@ -15,13 +15,13 @@
         background-color: rgba(255, 255, 255, 0.5);
     }
 
-.top-row {
+.bottom-row {
     min-height: 3.5rem;
     background-color: rgba(0,0,0,0.4);
 }
 
 .navbar-brand {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 .bi {
@@ -64,11 +64,11 @@
 }
 
     .nav-item:first-of-type {
-        padding-top: 1rem;
+        padding-left: 1rem;
     }
 
     .nav-item:last-of-type {
-        padding-bottom: 1rem;
+        padding-right: 1rem;
     }
 
     .nav-item ::deep .nav-link {
@@ -88,10 +88,11 @@
         color: white;
     }
 
-    .nav-item ::deep .nav-link:hover {
-        background-color: rgba(255,255,255,0.1);
+    .top-nav ::deep .nav-link:hover {
+        background-color: rgba(255,255,255,0.20);
         color: white;
     }
+
 
 .nav-scrollable {
     display: none;
@@ -101,15 +102,53 @@
     display: block;
 }
 
+.top-row {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.2rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    white-space: nowrap;
+}
+
+    .top-nav ::deep .nav-link {
+        width: auto;
+        display: inline-flex;
+        align-items: center;
+        /* smaller than the bar */
+        height: 2.4rem;
+        border-radius: 6px;
+        /* padding inside each button */
+        padding: 0 0.75rem;
+        color: #d7d7d7;
+        text-decoration: none;
+    }
+
+
+    .top-nav ::deep a.active {
+        background-color: rgba(255,255,255,0.25);
+        color: white;
+    }
+
 @media (min-width: 641px) {
     .navbar-toggler {
         display: none;
     }
 
     .nav-scrollable {
-        /* Never collapse the sidebar for wide screens */
+        /* Never collapse the top-row for wide screens */
         display: block;
-        /* Allow sidebar to scroll for tall menus */
+        /* Allow top-row to scroll for tall menus */
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
     }

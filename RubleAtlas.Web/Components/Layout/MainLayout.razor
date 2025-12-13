@@ -1,18 +1,19 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
+    <div class="top-row">
         <NavMenu />
     </div>
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
         <article class="content">
             @Body
         </article>
+
+        <div class="bottom-row px-4">
+            <div class="source-text">Data source: <b>Bank of Russia</b></div>
+            <a href="https://github.com/nahmaida/TheRubleAtlas/" target="_blank">About</a>
+        </div>
     </main>
 </div>
 
