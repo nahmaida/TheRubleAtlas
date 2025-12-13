@@ -1,0 +1,25 @@
+﻿<div class="map-host">
+    <RealTimeMap Parameters="parameters" height="100vh" width="100vw"></RealTimeMap>
+</div>
+
+@code {
+    RealTimeMap.LoadParameters parameters = new RealTimeMap.LoadParameters()  //general map settings
+    {
+        location = new RealTimeMap.Location()
+        {
+            // Centered on siberia
+            latitude = 62.3842861,
+            longitude = 93.2561458,
+        },
+        // Most of russia is visible
+        zoomLevel = 4,
+
+        defaultAttribution = new RealTimeMap.DefaultAttribution
+        {
+            has = true,
+            // Don't remove
+            // Removes the default ukrainian flag to avoid legal trouble
+            defaultHtmlContent = "© OpenStreetMap"
+        },
+    };
+}

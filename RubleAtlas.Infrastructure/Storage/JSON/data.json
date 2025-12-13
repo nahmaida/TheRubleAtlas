@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "1.2",
+  "currency": "RUB",
+  "notes": [
+    {
+      "id": "rub-5-1997",
+      "denomination": 5,
+      "year": 1997,
+
+      "places": {
+        "obverse": {
+          "cityKey": "City.VelikyNovgorod",
+          "lat": 58.521163601442794,
+          "lng": 31.275216459737525,
+          "landmarkKey": "Landmark.RUB5.1997.Obverse"
+        },
+        "reverse": {
+          "cityKey": "City.VelikyNovgorod",
+          "lat": 58.5215,
+          "lng": 31.2754,
+          "landmarkKey": "Landmark.RUB5.1997.Reverse"
+        }
+      },
+
+      "text": {
+        "triviaKey": "Trivia.RUB5.1997"
+      },
+
+      "security": {
+        "highlightsKeys": [
+          "Security.MachineReadableFeatures",
+          "Security.TwoSerialNumbers.Series2LettersPlus7Digits"
+        ]
+      },
+
+      "images": {
+        "obverseUrl": "/images/rub-5-1997-obverse.jpg",
+        "reverseUrl": "/images/rub-5-1997-reverse.jpg"
+      },
+
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/5rub/"
+      }
+    },
+
+    {
+      "id": "rub-100-1997",
+      "denomination": 100,
+      "year": 1997,
+
+      "places": {
+        "obverse": {
+          "cityKey": "City.Moscow",
+          "lat": 55.7601,
+          "lng": 37.6186,
+          "landmarkKey": "Landmark.RUB100.1997.Obverse"
+        },
+        "reverse": {
+          "cityKey": "City.Moscow",
+          "lat": 55.7601,
+          "lng": 37.6186,
+          "landmarkKey": "Landmark.RUB100.1997.Reverse"
+        }
+      },
+
+      "text": {
+        "triviaKey": "Trivia.RUB100.1997"
+      },
+
+      "security": {
+        "highlightsKeys": [
+          "Security.MachineReadableFeatures",
+          "Security.TwoSerialNumbers.Series2LettersPlus7Digits"
+        ]
+      },
+
+      "images": {
+        "obverseUrl": "/images/rub-100-1997-obverse.jpg",
+        "reverseUrl": "/images/rub-100-1997-reverse.jpg"
+      },
+
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/100rub/"
+      }
+    },
+
+    {
+      "id": "rub-1000-2010",
+      "denomination": 1000,
+      "year": 2010,
+
+      "places": {
+        "obverse": {
+          "cityKey": "City.Yaroslavl",
+          "lat": 57.6261,
+          "lng": 39.8845,
+          "landmarkKey": "Landmark.RUB1000.2010.Obverse"
+        },
+        "reverse": {
+          "cityKey": "City.Yaroslavl",
+          "lat": 57.6261,
+          "lng": 39.8845,
+          "landmarkKey": "Landmark.RUB1000.2010.Reverse"
+        }
+      },
+
+      "text": {
+        "triviaKey": "Trivia.RUB1000.2010"
+      },
+
+      "security": {
+        "highlightsKeys": [
+          "Security.Fibres.TwoTypes",
+          "Security.Thread.WindowedMetallized5mm.RainbowEffect",
+          "Security.Watermark.MultitoneAndHighlight",
+          "Security.Microtext.IncludesYAROSLAVL",
+          "Security.Tactile.RaisedPrint"
+        ]
+      },
+
+      "images": {
+        "obverseUrl": "/images/rub-1000-2010-obverse.jpg",
+        "reverseUrl": "/images/rub-1000-2010-reverse.jpg"
+      },
+
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/1000rub/?tab.current=y2010"
+      }
+    },
+
+    {
+      "id": "rub-2000-2017",
+      "denomination": 2000,
+      "year": 2017,
+
+      "places": {
+        "obverse": {
+          "cityKey": "City.Vladivostok",
+          "lat": 43.1155,
+          "lng": 131.8855,
+          "landmarkKey": "Landmark.RUB2000.2017.Obverse"
+        },
+        "reverse": {
+          "cityKey": "City.Tsiolkovsky",
+          "lat": 51.7624,
+          "lng": 128.1216,
+          "landmarkKey": "Landmark.RUB2000.2017.Reverse"
+        }
+      },
+
+      "text": {
+        "triviaKey": "Trivia.RUB2000.2017"
+      },
+
+      "security": {
+        "highlightsKeys": [
+          "Security.QRCode.ToCBRInfo",
+          "Security.Paper.WhiteCotton",
+          "Security.Fibres.ColouredRedBlueAndGrey"
+        ]
+      },
+
+      "images": {
+        "obverseUrl": "/images/rub-2000-2017-obverse.jpg",
+        "reverseUrl": "/images/rub-2000-2017-reverse.jpg"
+      },
+
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/2000rub/"
+      }
+    },
+
+    {
+      "id": "rub-5000-1997",
+      "denomination": 5000,
+      "year": 1997,
+
+      "places": {
+        "obverse": {
+          "cityKey": "City.Khabarovsk",
+          "lat": 48.4827,
+          "lng": 135.0840,
+          "landmarkKey": "Landmark.RUB5000.1997.Obverse"
+        },
+        "reverse": {
+          "cityKey": "City.Khabarovsk",
+          "lat": 48.4827,
+          "lng": 135.0840,
+          "landmarkKey": "Landmark.RUB5000.1997.Reverse"
+        }
+      },
+
+      "text": {
+        "triviaKey": "Trivia.RUB5000.1997"
+      },
+
+      "security": {
+        "highlightsKeys": [
+          "Security.MachineReadableFeatures",
+          "Security.TwoSerialNumbers.Series2LettersPlus7Digits"
+        ]
+      },
+
+      "images": {
+        "obverseUrl": "/images/rub-5000-1997-obverse.jpg",
+        "reverseUrl": "/images/rub-5000-1997-reverse.jpg"
+      },
+
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/5000rub/"
+      }
+    }
+  ]
+}
