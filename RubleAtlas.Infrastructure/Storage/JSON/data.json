@@ -1,45 +1,136 @@
 {
-  "schemaVersion": "1.2",
+  "schemaVersion": "1.3",
   "currency": "RUB",
   "notes": [
     {
       "id": "rub-5-1997",
       "denomination": 5,
       "year": 1997,
-
       "places": {
-        "obverse": {
-          "cityKey": "City.VelikyNovgorod",
-          "lat": 58.521163601442794,
-          "lng": 31.275216459737525,
-          "landmarkKey": "Landmark.RUB5.1997.Obverse"
-        },
-        "reverse": {
-          "cityKey": "City.VelikyNovgorod",
-          "lat": 58.5215,
-          "lng": 31.2754,
-          "landmarkKey": "Landmark.RUB5.1997.Reverse"
-        }
+        "obverse": [
+          {
+            "cityKey": "City.VelikyNovgorod",
+            "lat": 58.521163601442794,
+            "lng": 31.275216459737525,
+            "landmarkKey": "Landmark.RUB5.1997.Obverse.MillenniumOfRussia"
+          },
+          {
+            "cityKey": "City.VelikyNovgorod",
+            "lat": 58.52209843840809,
+            "lng": 31.27664282170136,
+            "landmarkKey": "Landmark.RUB5.1997.Obverse.SophiaCathedral"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.VelikyNovgorod",
+            "lat": 58.5191728955269,
+            "lng": 31.272950862325374,
+            "landmarkKey": "Landmark.RUB5.1997.Reverse.NovgorodKremlinWall"
+          }
+        ]
       },
-
-      "text": {
-        "triviaKey": "Trivia.RUB5.1997"
-      },
-
+      "text": { "triviaKey": "Trivia.RUB5.1997" },
       "security": {
         "highlightsKeys": [
           "Security.MachineReadableFeatures",
           "Security.TwoSerialNumbers.Series2LettersPlus7Digits"
         ]
       },
-
       "images": {
         "obverseUrl": "/images/rub-5-1997-obverse.jpg",
         "reverseUrl": "/images/rub-5-1997-reverse.jpg"
       },
-
       "sources": {
         "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/5rub/"
+      }
+    },
+
+    {
+      "id": "rub-10-1997",
+      "denomination": 10,
+      "year": 1997,
+      "places": {
+        "obverse": [
+          {
+            "cityKey": "City.Krasnoyarsk",
+            "lat": 56.001847089829404,
+            "lng": 92.87539782022147,
+            "landmarkKey": "Landmark.RUB10.1997.Obverse.YeniseyBridge"
+          },
+          {
+            "cityKey": "City.Krasnoyarsk",
+            "lat": 56.02368284693326,
+            "lng": 92.85971465396082,
+            "landmarkKey": "Landmark.RUB10.1997.Obverse.KrasnoyarskChapel"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.Krasnoyarsk",
+            "lat": 55.93599909712238,
+            "lng": 92.29490516941848,
+            "landmarkKey": "Landmark.RUB10.1997.Reverse.KrasnoyarskHydroDam"
+          }
+        ]
+      },
+      "text": { "triviaKey": "Trivia.RUB10.1997" },
+      "security": {
+        "highlightsKeys": [
+          "Security.MachineReadableFeatures",
+          "Security.TwoSerialNumbers.Series2LettersPlus7Digits"
+        ]
+      },
+      "images": {
+        "obverseUrl": "/images/rub-10-1997-obverse.jpg",
+        "reverseUrl": "/images/rub-10-1997-reverse.jpg"
+      },
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/10rub/"
+      }
+    },
+
+    {
+      "id": "rub-50-1997",
+      "denomination": 50,
+      "year": 1997,
+      "places": {
+        "obverse": [
+          {
+            "cityKey": "City.SaintPetersburg",
+            "lat": 59.943091342617706,
+            "lng": 30.306959430388748,
+            "landmarkKey": "Landmark.RUB50.1997.Obverse.RostralColumn"
+          },
+          {
+            "cityKey": "City.SaintPetersburg",
+            "lat": 59.95029691283442,
+            "lng": 30.315605162095135,
+            "landmarkKey": "Landmark.RUB50.1997.Obverse.PeterAndPaulFortress"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.SaintPetersburg",
+            "lat": 59.94354890682147,
+            "lng": 30.30451017805298,
+            "landmarkKey": "Landmark.RUB50.1997.Reverse.StockExchange"
+          }
+        ]
+      },
+      "text": { "triviaKey": "Trivia.RUB50.1997" },
+      "security": {
+        "highlightsKeys": [
+          "Security.MachineReadableFeatures",
+          "Security.TwoSerialNumbers.Series2LettersPlus7Digits"
+        ]
+      },
+      "images": {
+        "obverseUrl": "/images/rub-50-1997-obverse.jpg",
+        "reverseUrl": "/images/rub-50-1997-reverse.jpg"
+      },
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/50rub/?tab.current=y1997"
       }
     },
 
@@ -47,111 +138,63 @@
       "id": "rub-100-1997",
       "denomination": 100,
       "year": 1997,
-
       "places": {
-        "obverse": {
-          "cityKey": "City.Moscow",
-          "lat": 55.7601,
-          "lng": 37.6186,
-          "landmarkKey": "Landmark.RUB100.1997.Obverse"
-        },
-        "reverse": {
-          "cityKey": "City.Moscow",
-          "lat": 55.7601,
-          "lng": 37.6186,
-          "landmarkKey": "Landmark.RUB100.1997.Reverse"
-        }
+        "obverse": [
+          {
+            "cityKey": "City.Moscow",
+            "lat": 55.759777157061045,
+            "lng": 37.61865441923771,
+            "landmarkKey": "Landmark.RUB100.1997.Obverse.QuadrigaBolshoi"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.Moscow",
+            "lat": 55.760343227511605,
+            "lng": 37.61832183617387,
+            "landmarkKey": "Landmark.RUB100.1997.Reverse.BolshoiTheatre"
+          }
+        ]
       },
-
-      "text": {
-        "triviaKey": "Trivia.RUB100.1997"
-      },
-
+      "text": { "triviaKey": "Trivia.RUB100.1997" },
       "security": {
         "highlightsKeys": [
           "Security.MachineReadableFeatures",
           "Security.TwoSerialNumbers.Series2LettersPlus7Digits"
         ]
       },
-
       "images": {
         "obverseUrl": "/images/rub-100-1997-obverse.jpg",
         "reverseUrl": "/images/rub-100-1997-reverse.jpg"
       },
-
       "sources": {
-        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/100rub/"
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/100rub/?tab.current=y1997"
       }
     },
 
     {
-      "id": "rub-1000-2010",
-      "denomination": 1000,
-      "year": 2010,
-
+      "id": "rub-100-2022",
+      "denomination": 100,
+      "year": 2022,
       "places": {
-        "obverse": {
-          "cityKey": "City.Yaroslavl",
-          "lat": 57.6261,
-          "lng": 39.8845,
-          "landmarkKey": "Landmark.RUB1000.2010.Obverse"
-        },
-        "reverse": {
-          "cityKey": "City.Yaroslavl",
-          "lat": 57.6261,
-          "lng": 39.8845,
-          "landmarkKey": "Landmark.RUB1000.2010.Reverse"
-        }
-      },
-
-      "text": {
-        "triviaKey": "Trivia.RUB1000.2010"
-      },
-
-      "security": {
-        "highlightsKeys": [
-          "Security.Fibres.TwoTypes",
-          "Security.Thread.WindowedMetallized5mm.RainbowEffect",
-          "Security.Watermark.MultitoneAndHighlight",
-          "Security.Microtext.IncludesYAROSLAVL",
-          "Security.Tactile.RaisedPrint"
+        "obverse": [
+          {
+            "cityKey": "City.Moscow",
+            "lat": 55.75250717264569,
+            "lng": 37.62131116982349,
+            "landmarkKey": "Landmark.RUB100.2022.Obverse.SpasskayaTower"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.Rzhev",
+            "lat": 56.218570211144,
+            "lng": 34.262741560446706,
+            "landmarkKey": "Landmark.RUB100.2022.Reverse.RzhevMemorial"
+          }
         ]
       },
-
-      "images": {
-        "obverseUrl": "/images/rub-1000-2010-obverse.jpg",
-        "reverseUrl": "/images/rub-1000-2010-reverse.jpg"
-      },
-
-      "sources": {
-        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/1000rub/?tab.current=y2010"
-      }
-    },
-
-    {
-      "id": "rub-2000-2017",
-      "denomination": 2000,
-      "year": 2017,
-
-      "places": {
-        "obverse": {
-          "cityKey": "City.Vladivostok",
-          "lat": 43.1155,
-          "lng": 131.8855,
-          "landmarkKey": "Landmark.RUB2000.2017.Obverse"
-        },
-        "reverse": {
-          "cityKey": "City.Tsiolkovsky",
-          "lat": 51.7624,
-          "lng": 128.1216,
-          "landmarkKey": "Landmark.RUB2000.2017.Reverse"
-        }
-      },
-
-      "text": {
-        "triviaKey": "Trivia.RUB2000.2017"
-      },
-
+      "text": { "triviaKey": "Trivia.RUB100.2022" },
       "security": {
         "highlightsKeys": [
           "Security.QRCode.ToCBRInfo",
@@ -159,12 +202,184 @@
           "Security.Fibres.ColouredRedBlueAndGrey"
         ]
       },
+      "images": {
+        "obverseUrl": "/images/rub-100-2022-obverse.jpg",
+        "reverseUrl": "/images/rub-100-2022-reverse.jpg"
+      },
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/100rub/"
+      }
+    },
 
+    {
+      "id": "rub-200-2017",
+      "denomination": 200,
+      "year": 2017,
+      "places": {
+        "obverse": [
+          {
+            "cityKey": "City.Sevastopol",
+            "lat": 44.61837188205948,
+            "lng": 33.52424322027615,
+            "landmarkKey": "Landmark.RUB200.2017.Obverse.MonumentToSunkenShips"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.Sevastopol",
+            "lat": 44.61244159885995,
+            "lng": 33.490310615134526,
+            "landmarkKey": "Landmark.RUB200.2017.Reverse.TauricChersonese"
+          }
+        ]
+      },
+      "text": { "triviaKey": "Trivia.RUB200.2017" },
+      "security": {
+        "highlightsKeys": [
+          "Security.QRCode.ToCBRInfo",
+          "Security.Paper.WhiteCotton.PolymerImpregnated",
+          "Security.Thread.Holographic3mm"
+        ]
+      },
+      "images": {
+        "obverseUrl": "/images/rub-200-2017-obverse.jpg",
+        "reverseUrl": "/images/rub-200-2017-reverse.jpg"
+      },
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/200rub/"
+      }
+    },
+
+    {
+      "id": "rub-500-1997",
+      "denomination": 500,
+      "year": 1997,
+      "places": {
+        "obverse": [
+          {
+            "cityKey": "City.Arkhangelsk",
+            "lat": 64.53677822381148,
+            "lng": 40.51107830982057,
+            "landmarkKey": "Landmark.RUB500.1997.Obverse.PeterTheGreatMonument"
+          },
+          {
+            "cityKey": "City.Arkhangelsk",
+            "lat": 64.5280878109682,
+            "lng": 40.5408390024996,
+            "landmarkKey": "Landmark.RUB500.1997.Obverse.SeaRiverPort"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.Solovetsky",
+            "lat": 65.02490976799817,
+            "lng": 35.709922210602045,
+            "landmarkKey": "Landmark.RUB500.1997.Obverse.SolovetskyMonastery"
+          }
+        ]
+      },
+      "text": { "triviaKey": "Trivia.RUB500.1997" },
+      "security": {
+        "highlightsKeys": [
+          "Security.MachineReadableFeatures",
+          "Security.TwoSerialNumbers.Series2LettersPlus7Digits"
+        ]
+      },
+      "images": {
+        "obverseUrl": "/images/rub-500-1997-obverse.jpg",
+        "reverseUrl": "/images/rub-500-1997-reverse.jpg"
+      },
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/500rub/?tab.current=y1997"
+      }
+    },
+
+    {
+      "id": "rub-1000-1997",
+      "denomination": 1000,
+      "year": 1997,
+      "places": {
+        "obverse": [
+          {
+            "cityKey": "City.Yaroslavl",
+            "lat": 57.62247576291078,
+            "lng": 39.88695858431221,
+            "landmarkKey": "Landmark.RUB1000.1997.Obverse.YaroslavTheWiseMonument"
+          },
+          {
+            "cityKey": "City.Yaroslavl",
+            "lat": 57.62029860985736,
+            "lng": 39.890255542338984,
+            "landmarkKey": "Landmark.RUB1000.1997.Obverse.YaroslavlChapel"
+          },
+          {
+            "cityKey": "City.Yaroslavl",
+            "lat": 57.62157590627251,
+            "lng": 39.8889969043463,
+            "landmarkKey": "Landmark.RUB1000.1997.Obverse.YaroslavlKremlin"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.Yaroslavl",
+            "lat": 57.61081359769578,
+            "lng": 39.85689502362329,
+            "landmarkKey": "Landmark.RUB1000.1997.Reverse.ChurchOfJohnThePrecursor"
+          }
+        ]
+      },
+      "text": { "triviaKey": "Trivia.RUB1000.1997" },
+      "security": {
+        "highlightsKeys": [
+          "Security.Fibres.TwoTypes",
+          "Security.Thread.WindowedMetallized",
+          "Security.Watermark.MultitoneAndHighlight",
+          "Security.Tactile.RaisedPrint"
+        ]
+      },
+      "images": {
+        "obverseUrl": "/images/rub-1000-1997-obverse.jpg",
+        "reverseUrl": "/images/rub-1000-1997-reverse.jpg"
+      },
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/1000rub/"
+      }
+    },
+
+    {
+      "id": "rub-2000-2017",
+      "denomination": 2000,
+      "year": 2017,
+      "places": {
+        "obverse": [
+          {
+            "cityKey": "City.Vladivostok",
+            "lat": 43.06347060023225,
+            "lng": 131.90791169960065,
+            "landmarkKey": "Landmark.RUB2000.2017.Obverse.RusskyBridge"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.Tsiolkovsky",
+            "lat": 51.87395201521028,
+            "lng": 128.35501051208036,
+            "landmarkKey": "Landmark.RUB2000.2017.Reverse.VostochnyCosmodrome"
+          }
+        ]
+      },
+      "text": { "triviaKey": "Trivia.RUB2000.2017" },
+      "security": {
+        "highlightsKeys": [
+          "Security.QRCode.ToCBRInfo",
+          "Security.Paper.WhiteCotton",
+          "Security.Fibres.ColouredRedBlueAndGrey"
+        ]
+      },
       "images": {
         "obverseUrl": "/images/rub-2000-2017-obverse.jpg",
         "reverseUrl": "/images/rub-2000-2017-reverse.jpg"
       },
-
       "sources": {
         "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/2000rub/"
       }
@@ -174,38 +389,92 @@
       "id": "rub-5000-1997",
       "denomination": 5000,
       "year": 1997,
-
       "places": {
-        "obverse": {
-          "cityKey": "City.Khabarovsk",
-          "lat": 48.4827,
-          "lng": 135.0840,
-          "landmarkKey": "Landmark.RUB5000.1997.Obverse"
-        },
-        "reverse": {
-          "cityKey": "City.Khabarovsk",
-          "lat": 48.4827,
-          "lng": 135.0840,
-          "landmarkKey": "Landmark.RUB5000.1997.Reverse"
-        }
+        "obverse": [
+          {
+            "cityKey": "City.Khabarovsk",
+            "lat": 48.472945841727764,
+            "lng": 135.0497299513124,
+            "landmarkKey": "Landmark.RUB5000.1997.Obverse.MuravyovAmurskyMonument"
+          },
+          {
+            "cityKey": "City.Khabarovsk",
+            "lat": 48.472633239027,
+            "lng": 135.0512718474206,
+            "landmarkKey": "Landmark.RUB5000.1997.Obverse.KhabarovskEmbankment"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.Khabarovsk",
+            "lat": 48.536591519340234,
+            "lng": 135.00235162085588,
+            "landmarkKey": "Landmark.RUB5000.1997.Reverse.AmurRiverBridge"
+          }
+        ]
       },
-
-      "text": {
-        "triviaKey": "Trivia.RUB5000.1997"
-      },
-
+      "text": { "triviaKey": "Trivia.RUB5000.1997" },
       "security": {
         "highlightsKeys": [
           "Security.MachineReadableFeatures",
           "Security.TwoSerialNumbers.Series2LettersPlus7Digits"
         ]
       },
-
       "images": {
         "obverseUrl": "/images/rub-5000-1997-obverse.jpg",
         "reverseUrl": "/images/rub-5000-1997-reverse.jpg"
       },
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/5000rub/?tab.current=y1997/"
+      }
+    },
 
+    {
+      "id": "rub-5000-2023",
+      "denomination": 5000,
+      "year": 2023,
+      "places": {
+        "obverse": [
+          {
+            "cityKey": "City.Yekaterinburg",
+            "lat": 56.83212071905255,
+            "lng": 60.35064922973669,
+            "landmarkKey": "Landmark.RUB5000.2023.Obverse.EuropeAsiaMonument"
+          },
+          {
+            "cityKey": "City.Yekaterinburg",
+            "lat": 56.82589118461965,
+            "lng": 60.60494695332888,
+            "landmarkKey": "Landmark.RUB5000.2023.Obverse.CityCenter"
+          },
+          {
+            "cityKey": "City.Yekaterinburg",
+            "lat": 56.8151083514124,
+            "lng": 60.540617038758846,
+            "landmarkKey": "Landmark.RUB5000.2023.Obverse.FerrisWheel"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.Chelyabinsk",
+            "lat": 55.1417160503531,
+            "lng": 61.41368825478388,
+            "landmarkKey": "Landmark.RUB5000.1997.Reverse.UralMonument"
+          }
+        ]
+      },
+      "text": { "triviaKey": "Trivia.RUB5000.2023" },
+      "security": {
+        "highlightsKeys": [
+          "Security.QRCode.ToCBRInfo",
+          "Security.Paper.WhiteCotton",
+          "Security.Fibres.ColouredRedBlueAndGrey"
+        ]
+      },
+      "images": {
+        "obverseUrl": "/images/rub-5000-2023-obverse.jpg",
+        "reverseUrl": "/images/rub-5000-2023-reverse.jpg"
+      },
       "sources": {
         "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/5000rub/"
       }

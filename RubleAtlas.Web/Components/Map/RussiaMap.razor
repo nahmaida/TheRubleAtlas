@@ -33,27 +33,34 @@
 
         foreach (var banknote in banknotes)
         {
-            await _map.Geometric.Points.add(new RealTimeMap.StreamPoint
+            foreach (var place in banknote.ObversePlaces)
             {
-                guid = Guid.NewGuid(),
-                type = "banknote",
-                value = banknote.Name,
-                latitude = banknote.ObversePlace.Latitude,
-                longitude = banknote.ObversePlace.Longitude
-            });
+                await _map.Geometric.Points.add(new RealTimeMap.StreamPoint
+                {
+                    guid = Guid.NewGuid(),
+                    type = "banknote",
+                    value = banknote.Name,
+                    latitude = place.Latitude,
+                    longitude = place.Longitude
+                });
+            }
 
-            await _map.Geometric.Points.add(new RealTimeMap.StreamPoint
+            foreach (var place in banknote.ReversePlaces)
             {
-                guid = Guid.NewGuid(),
-                type = "banknote",
-                value = banknote.Name,
-                latitude = banknote.ReversePlace.Latitude,
-                longitude = banknote.ReversePlace.Longitude
-            });
+                await _map.Geometric.Points.add(new RealTimeMap.StreamPoint
+                {
+                    guid = Guid.NewGuid(),
+                    type = "banknote",
+                    value = banknote.Name,
+                    latitude = place.Latitude,
+                    longitude = place.Longitude
+                });
+            }
         }
 
         Console.WriteLine("Markers loaded");
     }
+
 
     RealTimeMap.LoadParameters parameters = new RealTimeMap.LoadParameters()  //general map settings
     {
@@ -72,17 +79,8 @@
             // Don't remove
             // Removes the default ukrainian flag to avoid legal trouble
             defaultHtmlContent = "© OpenStreetMap"
-        },
+        }
     };
 
-    RealTimeMap.PointSymbol symbol = new RealTimeMap.PointSymbol()
-    {
-        color = "red",
-        fillColor = "yellow",
-        radius = 10,
-        weight = 3,
-        opacity = 1,
-        fillOpacity = 1
-    };
     bool run = false;
 }
