@@ -1,4 +1,5 @@
 using RubleAtlas.Web.Components;
+using RubleAtlas.Infrastructure.Storage.JSON;
 
 namespace RubleAtlas.Web
 {
@@ -6,9 +7,13 @@ namespace RubleAtlas.Web
     {
         public static void Main(string[] args)
         {
+            const string filepath = @"C:\Users\nahmaida\source\repos\RubleAtlas\RubleAtlas.Infrastructure\Storage\JSON\data.json";
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddSingleton(_ => new JSONStorage(filepath));
+
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 

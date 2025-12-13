@@ -2,7 +2,7 @@
 
 namespace RubleAtlas.Infrastructure.Storage.JSON
 {
-    internal class JSONStorage
+    public class JSONStorage
     {
         private readonly string _filePath;
         private readonly JSONParser _parser;
@@ -14,6 +14,14 @@ namespace RubleAtlas.Infrastructure.Storage.JSON
             _filePath = filePath;
             _parser = new JSONParser(_filePath);
             _banknotes = _parser.ParseBanknotes();
+        }
+
+        public List<Banknote> GetBanknotes()
+        {
+            lock (_lock)
+            {
+                return _banknotes;
+            }
         }
     }
 }
