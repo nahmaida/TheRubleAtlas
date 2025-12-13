@@ -459,7 +459,13 @@
             "cityKey": "City.Chelyabinsk",
             "lat": 55.1417160503531,
             "lng": 61.41368825478388,
-            "landmarkKey": "Landmark.RUB5000.1997.Reverse.UralMonument"
+            "landmarkKey": "Landmark.RUB5000.2023.Reverse.UralMonument"
+          },
+          {
+            "cityKey": "City.Salekhard",
+            "lat": 66.5509906425618,
+            "lng": 66.6264121009056,
+            "landmarkKey": "Landmark.RUB5000.2023.Reverse.66thParallel"
           }
         ]
       },
