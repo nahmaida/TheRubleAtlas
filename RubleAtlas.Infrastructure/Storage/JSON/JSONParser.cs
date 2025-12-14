@@ -29,6 +29,7 @@ internal class JSONParser
                 name: n.Id, // JSON "id" -> Banknote.Name
                 denomination: n.Denomination,
                 year: n.Year,
+                color: n.Color,
                 obversePlaces: n.Places.Obverse.Select(p =>
                     new Place(
                         name: p.CityKey,

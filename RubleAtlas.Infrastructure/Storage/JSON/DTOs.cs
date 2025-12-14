@@ -19,6 +19,9 @@ public sealed class BanknoteDto
     [JsonPropertyName("year")]
     public int Year { get; set; }
 
+    [JsonPropertyName("color")]
+    public string Color { get; set; }
+
     [JsonPropertyName("places")]
     public PlacesDto Places { get; set; } = new();
 }

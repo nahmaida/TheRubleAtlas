@@ -10,25 +10,6 @@
     private RealTimeMap? _map;
     private bool _markersAdded;
 
-    private static readonly Dictionary<string, string> ColorByBanknote = new()
-    {
-        // 1997 series
-        { "rub-5-1997",    "#becbb8" }, // gray-green
-        { "rub-10-1997",   "#b3a8b8" }, // gray-purple
-        { "rub-50-1997",   "#99c1e0" }, // blue
-        { "rub-100-1997",  "#d8b37c" }, // yellow-ish
-        { "rub-500-1997",  "#a28091" }, // burgundy?
-        { "rub-1000-1997", "#97b1c6" }, // sky blue / teal
-        { "rub-5000-1997", "#a33a2b" }, // red-brown
-
-        // Modern denominations
-        { "rub-200-2017",  "#61a44e" }, // green
-        { "rub-2000-2017", "#2268b7" }, // bright blue
-        { "rub-100-2022",  "#e8dc73" }, // orange
-        { "rub-5000-2023", "#f5c3b0" }, // salmon
-    };
-
-
     private async Task AddMarkers(RealTimeMap.MapEventArgs args, List<Banknote> banknotes)
     {
         if (_map is null) return;
@@ -40,13 +21,9 @@
         {
             string type = banknote.Name;
 
-            string placeholderColor = "#808080";
-            if (!ColorByBanknote.TryGetValue(type, out string fillColor))
-            {
-                fillColor = placeholderColor;
-            }
+            string fillColor = banknote.Color;
 
-            SetPointsColor(args, fillColor, type);
+            SetPointsAppearance(args, fillColor, banknote);
 
             foreach (var place in banknote.ObversePlaces)
             {
@@ -89,8 +66,12 @@
         _markersAdded = true;
     }
 
-    void SetPointsColor(RealTimeMap.MapEventArgs args, string fillColor, string type)
+    void SetPointsAppearance(RealTimeMap.MapEventArgs args, string fillColor, Banknote note)
     {
+        string type = note.Name;
+        int value = note.Denomination;
+        int year = note.Year;
+
         // Style all banknote points of this type
         args.sender.Geometric.Points.AppearanceOnType(p => p.type == type).pattern =
             new RealTimeMap.PointSymbol
@@ -102,6 +83,14 @@
                 fillOpacity = 0.9,
                 opacity = 1
             };
+
+        args.sender.Geometric.Points.AppearanceOnType(p => p.type == type).pattern =
+        new RealTimeMap.PointTooltip
+        {
+            content = $"<b>{value}₽</b> {year}",
+            permanent = false,
+            opacity = 0.9
+        };
 
         Console.WriteLine("Markers colored");
     }

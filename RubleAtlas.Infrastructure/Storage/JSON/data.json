@@ -6,6 +6,7 @@
       "id": "rub-5-1997",
       "denomination": 5,
       "year": 1997,
+      "color": "#becbb8",
       "places": {
         "obverse": [
           {
@@ -50,6 +51,7 @@
       "id": "rub-10-1997",
       "denomination": 10,
       "year": 1997,
+      "color": "#b3a8b8",
       "places": {
         "obverse": [
           {
@@ -94,6 +96,7 @@
       "id": "rub-50-1997",
       "denomination": 50,
       "year": 1997,
+      "color": "#99c1e0",
       "places": {
         "obverse": [
           {
@@ -138,6 +141,7 @@
       "id": "rub-100-1997",
       "denomination": 100,
       "year": 1997,
+      "color": "#d8b37c",
       "places": {
         "obverse": [
           {
@@ -176,6 +180,7 @@
       "id": "rub-100-2022",
       "denomination": 100,
       "year": 2022,
+      "color": "#e8dc73",
       "places": {
         "obverse": [
           {
@@ -215,6 +220,7 @@
       "id": "rub-200-2017",
       "denomination": 200,
       "year": 2017,
+      "color": "#2268b7",
       "places": {
         "obverse": [
           {
@@ -254,6 +260,7 @@
       "id": "rub-500-1997",
       "denomination": 500,
       "year": 1997,
+      "color": "#a28091",
       "places": {
         "obverse": [
           {
@@ -298,6 +305,7 @@
       "id": "rub-1000-1997",
       "denomination": 1000,
       "year": 1997,
+      "color": "#97b1c6",
       "places": {
         "obverse": [
           {
@@ -350,6 +358,7 @@
       "id": "rub-2000-2017",
       "denomination": 2000,
       "year": 2017,
+      "color": "#2268b7",
       "places": {
         "obverse": [
           {
@@ -389,6 +398,7 @@
       "id": "rub-5000-1997",
       "denomination": 5000,
       "year": 1997,
+      "color": "#a33a2b",
       "places": {
         "obverse": [
           {
@@ -433,6 +443,7 @@
       "id": "rub-5000-2023",
       "denomination": 5000,
       "year": 2023,
+      "color": "#f5c3b0",
       "places": {
         "obverse": [
           {
