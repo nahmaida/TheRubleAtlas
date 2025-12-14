@@ -3,28 +3,33 @@
 @inject JSONStorage Storage
 
 <div class="map-host">
-    <RealTimeMap Parameters="parameters" height="100vh" width="100vw" @ref="_map"></RealTimeMap>
+    <RealTimeMap Parameters="parameters" height="100vh" width="100vw" @ref="_map" OnAfterMapLoaded="OnAfterMapLoaded"></RealTimeMap>
 </div>
 
 @code {
     private RealTimeMap? _map;
     private bool _markersAdded;
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    private static readonly Dictionary<string, string> ColorByBanknote = new()
     {
-        if (!firstRender || _markersAdded || _map is null) return;
+        // 1997 series
+        { "rub-5-1997",    "#becbb8" }, // gray-green
+        { "rub-10-1997",   "#b3a8b8" }, // gray-purple
+        { "rub-50-1997",   "#99c1e0" }, // blue
+        { "rub-100-1997",  "#d8b37c" }, // yellow-ish
+        { "rub-500-1997",  "#a28091" }, // burgundy?
+        { "rub-1000-1997", "#97b1c6" }, // sky blue / teal
+        { "rub-5000-1997", "#a33a2b" }, // red-brown
 
-        Console.WriteLine("Map rendering...");
+        // Modern denominations
+        { "rub-200-2017",  "#61a44e" }, // green
+        { "rub-2000-2017", "#2268b7" }, // bright blue
+        { "rub-100-2022",  "#e8dc73" }, // orange
+        { "rub-5000-2023", "#f5c3b0" }, // salmon
+    };
 
-        await Task.Delay(1000);
 
-        List<Banknote> banknotes = Storage.GetBanknotes();
-        await AddMarkers(banknotes);
-
-        _markersAdded = true;
-    }
-
-    private async Task AddMarkers(List<Banknote> banknotes)
+    private async Task AddMarkers(RealTimeMap.MapEventArgs args, List<Banknote> banknotes)
     {
         if (_map is null) return;
 
@@ -33,12 +38,22 @@
 
         foreach (var banknote in banknotes)
         {
+            string type = banknote.Name;
+
+            string placeholderColor = "#808080";
+            if (!ColorByBanknote.TryGetValue(type, out string fillColor))
+            {
+                fillColor = placeholderColor;
+            }
+
+            SetPointsColor(args, fillColor, type);
+
             foreach (var place in banknote.ObversePlaces)
             {
                 await _map.Geometric.Points.add(new RealTimeMap.StreamPoint
                 {
                     guid = Guid.NewGuid(),
-                    type = "banknote",
+                    type = type,
                     value = banknote.Name,
                     latitude = place.Latitude,
                     longitude = place.Longitude
@@ -50,15 +65,45 @@
                 await _map.Geometric.Points.add(new RealTimeMap.StreamPoint
                 {
                     guid = Guid.NewGuid(),
-                    type = "banknote",
+                    type = type,
                     value = banknote.Name,
                     latitude = place.Latitude,
                     longitude = place.Longitude
                 });
             }
         }
+    }
 
+    private async Task OnAfterMapLoaded(RealTimeMap.MapEventArgs args)
+    {
+        if (_markersAdded || _map is null) return;
+
+        Console.WriteLine("Map rendering...");
+
+        await Task.Delay(1000);
+
+        List<Banknote> banknotes = Storage.GetBanknotes();
+        await AddMarkers(args, banknotes);
         Console.WriteLine("Markers loaded");
+
+        _markersAdded = true;
+    }
+
+    void SetPointsColor(RealTimeMap.MapEventArgs args, string fillColor, string type)
+    {
+        // Style all banknote points of this type
+        args.sender.Geometric.Points.AppearanceOnType(p => p.type == type).pattern =
+            new RealTimeMap.PointSymbol
+            {
+                fillColor = fillColor,
+                color = "#1f1f1f",     // outline
+                radius = 7,
+                weight = 2,
+                fillOpacity = 0.9,
+                opacity = 1
+            };
+
+        Console.WriteLine("Markers colored");
     }
 
 
