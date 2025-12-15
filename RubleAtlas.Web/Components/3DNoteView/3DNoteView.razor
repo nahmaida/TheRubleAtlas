@@ -1,0 +1,140 @@
+﻿@using HomagGroup.Blazor3D.Textures
+@using SixLabors.ImageSharp;
+@using RubleAtlas.Domain
+@inject IWebHostEnvironment Env
+@inject NavigationManager Nav
+<div id="@_containerId" class="v3d-host">
+    <Viewer @ref="View3D1" ViewerSettings="@settings" Scene="scene" />
+</div>
+
+@code {
+    [Parameter]
+    public Banknote Banknote { get; set; }
+
+    private Viewer View3D1 = null!;
+    private Guid objGuid;
+
+    // set unique container id
+    // :N formats Guid as a hex Number
+    private readonly string _containerId = $"banknote-viewer-{Guid.NewGuid():N}";
+    private ViewerSettings settings = new();
+
+    private Scene scene = new Scene();
+    private const int zoomLevel = 1;
+    // Yes, all that file path work is unnecessarily complicated
+    // But it is what it is
+    private string ObverseRel => $"images/banknotes/{Banknote.Name}-obverse.jpg";
+    private string ReverseRel => $"images/banknotes/{Banknote.Name}-reverse.jpg";
+
+    private string ToPhysicalPath(string rel)
+        => Path.Combine(Env.WebRootPath, rel.Replace("/", Path.DirectorySeparatorChar.ToString()));
+
+    private string ToAbsoluteUrl(string rel)
+        => new Uri(new Uri(Nav.BaseUri), rel).ToString(); // safe URL join
+
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // subscribe events only once
+            View3D1.JsModuleLoaded += OnJsModuleLoaded;
+        }
+
+        return base.OnAfterRenderAsync(firstRender);
+    }
+
+    private async Task OnJsModuleLoaded()
+    {
+        // set camera position
+        // in front of the obverse, zoomLevel unit away
+        // yes, all that boilerplate is for a single line
+        await View3D1.SetCameraPositionAsync(new Vector3(0, 0, zoomLevel), new Vector3(0, 0, 0));
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        scene = new Scene();
+
+        settings = new ViewerSettings
+        {
+            ContainerId = _containerId,
+            ShowViewHelper = false
+        };
+
+        // add lighting
+        var light = new AmbientLight();
+        light.Intensity = 1;
+        scene.Add(light);
+
+        // Get image paths and size for banknote
+        var obversePhysical = ToPhysicalPath(ObverseRel);
+        using var image = Image.Load(obversePhysical);
+        var pxW = image.Width; // width in pixels
+        var pxH = image.Height; // height in pixels
+
+        var obversePath = ToAbsoluteUrl(ObverseRel);
+        var reversePath = ToAbsoluteUrl(ReverseRel);
+
+        // scale width and height down to normal size
+        const double worldHeight = 1.0;
+        var aspect = (double)pxW / pxH; // aspect ratio
+        var worldWidth = worldHeight * aspect; 
+
+        // Create a plane centered at origin
+        var geom = new PlaneGeometry
+        {
+            Width = worldWidth,
+            Height = worldHeight
+        };
+
+        // Front side (facing +Z)
+        scene.Add(new Mesh
+        {
+            Geometry = geom,
+            Position = new Vector3(0, 0, 0.001), // tiny offset so faces don’t overlap
+            Material = new MeshStandardMaterial
+            {
+                Color = "white",
+                Map = CreateTexture(obversePath),
+            }
+        });
+
+        // Back side (facing -Z) – rotated 180° around Y
+        scene.Add(new Mesh
+        {
+            Geometry = geom,
+            Position = new Vector3(0, 0, -0.001),
+            Rotation = new Euler
+            {
+                Y = Math.PI
+            },  // flip around Y axis
+            Material = new MeshStandardMaterial
+            {
+                Color = "white",
+                Map = CreateTexture(reversePath),
+            }
+        });
+    }
+
+    private Texture CreateTexture(
+        string url,
+        WrappingType wraps = WrappingType.ClampToEdgeWrapping,
+        WrappingType wrapt = WrappingType.ClampToEdgeWrapping,
+        Vector2? repeat = null,
+        Vector2? offset = null,
+        double? rotation = null)
+    {
+        var texture = new Texture()
+        {
+            TextureUrl = url,
+            WrapS = wraps,
+            WrapT = wrapt
+        };
+
+        texture.Repeat = repeat == null ? texture.Repeat : repeat;
+        texture.Offset = offset == null ? texture.Offset : offset;
+        texture.Rotation = !rotation.HasValue ? texture.Rotation : rotation.Value;
+
+        return texture;
+    }
+}

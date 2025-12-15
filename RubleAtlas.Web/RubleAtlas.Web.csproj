@@ -1,7 +1,59 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\rub-10-1997-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-10-1997-reverse.jpg" />
+    <Content Remove="wwwroot\images\rub-100-1997-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-100-1997-reverse.jpg" />
+    <Content Remove="wwwroot\images\rub-100-2022-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-100-2022-reverse.jpg" />
+    <Content Remove="wwwroot\images\rub-1000-1997-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-1000-1997-reverse.jpg" />
+    <Content Remove="wwwroot\images\rub-200-2017-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-200-2017-reverse.jpg" />
+    <Content Remove="wwwroot\images\rub-2000-2017-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-2000-2017-reverse.jpg" />
+    <Content Remove="wwwroot\images\rub-5-1997-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-5-1997-reverse.jpg" />
+    <Content Remove="wwwroot\images\rub-50-1997-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-50-1997-reverse.jpg" />
+    <Content Remove="wwwroot\images\rub-500-1997-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-500-1997-reverse.jpg" />
+    <Content Remove="wwwroot\images\rub-5000-1997-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-5000-1997-reverse.jpg" />
+    <Content Remove="wwwroot\images\rub-5000-2023-obverse.jpg" />
+    <Content Remove="wwwroot\images\rub-5000-2023-reverse.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\banknotes\rub-10-1997-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-10-1997-reverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-100-1997-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-100-1997-reverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-100-2022-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-100-2022-reverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-1000-1997-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-1000-1997-reverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-200-2017-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-200-2017-reverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-2000-2017-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-2000-2017-reverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-5-1997-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-5-1997-reverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-50-1997-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-50-1997-reverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-500-1997-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-500-1997-reverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-5000-1997-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-5000-1997-reverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-5000-2023-obverse.jpg" />
+    <None Include="wwwroot\images\banknotes\rub-5000-2023-reverse.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazor3D" Version="0.1.42" />
     <PackageReference Include="LeafletForBlazor" Version="2.4.0.2" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.12" />
   </ItemGroup>
 
   <ItemGroup>
