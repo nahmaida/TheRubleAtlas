@@ -1,12 +1,41 @@
 ﻿@using RubleAtlas.Domain
+<aside class="position-fixed bg-white shadow rounded-4 p-3 d-flex flex-column gap-3 infomenu @( Open ? "" : "d-none")"
+       role="dialog"
+       aria-labelledby="popupTitle">
+    <button type="button" class="btn-close closeinfomenu" aria-label="Close" @onclick="ToggleOpen"></button>
+    <h2 id="popupTitle" class="h5 m-0">@Banknote.Name</h2>
+
+    <!-- Future 3D view -->
+    <div class="border rounded-3 bg-light flex-grow-1 d-flex align-items-center justify-content-center">
+        3D View Placeholder
+    </div>
+
+    <NavLink class="btn btn-dark w-100" href="banknotes">
+        Read more...
+    </NavLink>
+
+    <hr class="my-1">
+
+    <h3 class="h6 m-0">Secondary title</h3>
+
+    <a class="d-block rounded-3 overflow-hidden" href="https://example.com/image-target" target="_blank" rel="noopener">
+        <img class="img-fluid"
+             src="https://via.placeholder.com/900x600"
+             alt="Related item">
+    </a>
+
+    <p class="small text-secondary m-0">
+        Lorem ipsum something something
+    </p>
+</aside>
 
 
 
 @code {
     [Parameter]
     public Banknote Banknote { get; set; }
+    [Parameter]
+    public bool Open { get; set; }
 
-    private bool _open;
-
-    private void ToggleOpen() => _open = !_open;
+    private void ToggleOpen() => Open = !Open;
 }

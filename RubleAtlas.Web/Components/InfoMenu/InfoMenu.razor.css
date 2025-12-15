@@ -1,0 +1,15 @@
+﻿.infomenu {
+    right: 1rem;
+    top: 8vh;
+    width: 20vw;
+    height: 86vh;
+    min-width: 260px;
+    max-width: 420px;
+    overflow: auto;
+    z-index: 1050;
+}
+
+.closeinfomenu {
+    position: absolute !important;
+    right: 1rem !important;
+}

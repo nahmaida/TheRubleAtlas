@@ -16,9 +16,20 @@ namespace RubleAtlas.Web
 
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
-
+                
             // Add localization support
             builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+            // Enable detailed errors
+            if (builder.Environment.IsDevelopment())
+            {
+                builder.Services.AddServerSideBlazor()
+                    .AddCircuitOptions(o => o.DetailedErrors = true);
+            }
+            else
+            {
+                builder.Services.AddServerSideBlazor();
+            }
 
             var app = builder.Build();
 
@@ -38,6 +49,7 @@ namespace RubleAtlas.Web
             app.MapStaticAssets();
             app.MapRazorComponents<App>()
                 .AddInteractiveServerRenderMode();
+
 
             app.Run();
         }
