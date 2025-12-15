@@ -16,12 +16,12 @@
 
     <hr class="my-1">
 
-    <h3 class="h6 m-0">Secondary title</h3>
+    <h3 class="h6 m-0">@Place.CityKey: @Place.LandmarkKey</h3>
 
     <a class="d-block rounded-3 overflow-hidden" href="https://example.com/image-target" target="_blank" rel="noopener">
         <img class="img-fluid"
              src="https://via.placeholder.com/900x600"
-             alt="Related item">
+             alt="@Place.LandmarkKey">
     </a>
 
     <p class="small text-secondary m-0">
@@ -34,6 +34,8 @@
 @code {
     [Parameter]
     public Banknote Banknote { get; set; }
+    [Parameter]
+    public Place Place { get; set; }
     [Parameter]
     public bool Open { get; set; }
 

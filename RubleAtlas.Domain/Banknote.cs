@@ -25,4 +25,19 @@ public class Banknote
         ObversePlaces = obversePlaces;
         ReversePlaces = reversePlaces;
     }
+
+    public Place? GetPlaceByCoordinates(double latitude, double longitude)
+    {
+        foreach (Place place in ObversePlaces)
+        {
+            if (place.Latitude == latitude && place.Longitude == longitude) return place;
+        }
+
+        foreach (Place place in ReversePlaces)
+        {
+            if (place.Latitude == latitude && place.Longitude == longitude) return place;
+        }
+
+        return null;
+    }
 }

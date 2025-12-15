@@ -6,10 +6,10 @@
 <div class="map-host">
     <RealTimeMap Parameters="parameters" height="100vh" width="100vw" @ref="_map" OnAfterMapLoaded="OnAfterMapLoaded" OnZoomLevelEndChange="OnZoomLevel" OnMouseDownMap="OnMouseDownMap"></RealTimeMap>
 
-    @if (_selected != null)
+    @if (_selectedNote != null)
     {
         <div class="note-panel" @onclick:stopPropagation="true">
-            <InfoMenu Banknote="_selected" Open="true"></InfoMenu>
+            <InfoMenu Banknote="_selectedNote" Place="_selectedPlace" Open="true"></InfoMenu>
         </div>
     }
 </div>
@@ -20,7 +20,8 @@
     private const int defaultZoom = 4;
     private int _zoom = defaultZoom; // Current zoom level
     private int _symbolRadiusPx = 7; // Point radius
-    private Banknote? _selected = null; // current selected note (for info menu)
+    private Banknote? _selectedNote = null; // current selected note (for info menu)
+    private Place? _selectedPlace = null; // selected place
 
     /// <summary>
     /// Updates the zoom level variable
@@ -150,8 +151,15 @@
         }
 
         Banknote? note = Storage.GetBanknoteByType(nearest.type);
+        double latitude = nearest.latitude;
+        double longitude = nearest.longitude;
+        Place? place = note.GetPlaceByCoordinates(latitude, longitude);
 
-        if (note != null) _selected = note;
+        if (note != null && place != null)
+        {
+            _selectedNote = note;
+            _selectedPlace = place;
+        }
     }
 
     /// <summary>
