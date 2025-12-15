@@ -1,0 +1,12 @@
+﻿@using RubleAtlas.Domain
+
+
+
+@code {
+    [Parameter]
+    public Banknote banknote { get; set; }
+
+    private bool _open;
+
+    private void ToggleOpen() => _open = !_open;
+}

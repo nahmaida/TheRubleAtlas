@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <PackageReference Include="LeafletForBlazor" Version="2.4.0.2" />
-    <PackageReference Include="MudBlazor" Version="8.15.0" />
   </ItemGroup>
 
   <ItemGroup>

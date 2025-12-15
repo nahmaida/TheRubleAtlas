@@ -23,5 +23,14 @@ namespace RubleAtlas.Infrastructure.Storage.JSON
                 return _banknotes;
             }
         }
+
+        public Banknote? GetBanknoteByType(string type)
+        {
+            lock (_lock)
+            {
+                Banknote? banknote = _banknotes.FirstOrDefault(b => b.Name == type);
+                return banknote;
+            }
+        }
     }
 }
