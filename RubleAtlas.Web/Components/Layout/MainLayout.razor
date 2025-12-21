@@ -1,4 +1,6 @@
 ﻿@inherits LayoutComponentBase
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
 
 <div class="page">
     <div class="top-row">
@@ -11,8 +13,8 @@
         </article>
 
         <div class="bottom-row px-4">
-            <div class="source-text">Data source: <b>Bank of Russia</b></div>
-            <a href="https://github.com/nahmaida/TheRubleAtlas/" target="_blank">About</a>
+            <div class="source-text">@L["Data_Source"]: <b>@L["Bank_of_Russia"]</b></div>
+            <a href="https://github.com/nahmaida/TheRubleAtlas/" target="_blank">@L["About"]</a>
         </div>
     </main>
 </div>

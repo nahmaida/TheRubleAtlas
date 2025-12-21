@@ -1,9 +1,12 @@
 ﻿@using RubleAtlas.Domain
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
+
 <aside class="position-fixed bg-white shadow rounded-4 p-3 d-flex flex-column gap-3 infomenu @( Open ? "" : "d-none")"
        role="dialog"
        aria-labelledby="popupTitle">
     <button type="button" class="btn-close closeinfomenu" aria-label="Close" @onclick="ToggleOpen"></button>
-    <h2 id="popupTitle" class="h5 m-0">@Banknote.Name</h2>
+    <h2 id="popupTitle" class="h5 m-0">@L[@Banknote.Name]</h2>
 
     <!-- Future 3D view -->
     <div class="border note3d rounded-3 bg-light">
@@ -11,17 +14,17 @@
     </div>
 
     <NavLink class="btn btn-dark w-100" href="banknotes">
-        Read more...
+        @L["Read_More"]
     </NavLink>
 
     <hr class="my-1">
 
-    <h3 class="h6 m-0">@Place.CityKey: @Place.LandmarkKey</h3>
+    <h3 class="h6 m-0">@L[@Place.CityKey]: @L[@Place.LandmarkKey]</h3>
 
     <a class="d-block rounded-3 overflow-hidden" href="https://example.com/image-target" target="_blank" rel="noopener">
         <img class="img-fluid"
              src="https://via.placeholder.com/900x600"
-             alt="@Place.LandmarkKey">
+             alt="@L[@Place.LandmarkKey]">
     </a>
 
     <p class="small text-secondary m-0">

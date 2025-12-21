@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Banknotes_Page_Title" xml:space="preserve">
+    <value>Banknotes</value>
+  </data>
+  <data name="Bank_of_Russia" xml:space="preserve">
+    <value>Bank of Russia</value>
+  </data>
+  <data name="Coins_Page_Title" xml:space="preserve">
+    <value>Coins</value>
+  </data>
+  <data name="Data_Source" xml:space="preserve">
+    <value> Data source</value>
+  </data>
+  <data name="Map_Page_Title" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="Project_Title" xml:space="preserve">
+    <value>RubleAtlas</value>
+  </data>
+  <data name="Read_More" xml:space="preserve">
+    <value>Read more...</value>
+  </data>
+    <data name="City.Arkhangelsk" xml:space="preserve">
+    <value>Arkhangelsk</value>
+  </data>
+  <data name="City.Chelyabinsk" xml:space="preserve">
+    <value>Chelyabinsk</value>
+  </data>
+  <data name="City.Khabarovsk" xml:space="preserve">
+    <value>Khabarovsk</value>
+  </data>
+  <data name="City.Krasnoyarsk" xml:space="preserve">
+    <value>Krasnoyarsk</value>
+  </data>
+  <data name="City.Moscow" xml:space="preserve">
+    <value>Moscow</value>
+  </data>
+  <data name="City.Rzhev" xml:space="preserve">
+    <value>Rzhev</value>
+  </data>
+  <data name="City.SaintPetersburg" xml:space="preserve">
+    <value>Saint Petersburg</value>
+  </data>
+  <data name="City.Salekhard" xml:space="preserve">
+    <value>Salekhard</value>
+  </data>
+  <data name="City.Sevastopol" xml:space="preserve">
+    <value>Sevastopol</value>
+  </data>
+  <data name="City.Solovetsky" xml:space="preserve">
+    <value>Solovetsky</value>
+  </data>
+  <data name="City.Tsiolkovsky" xml:space="preserve">
+    <value>Tsiolkovsky</value>
+  </data>
+  <data name="City.VelikyNovgorod" xml:space="preserve">
+    <value>Veliky Novgorod</value>
+  </data>
+  <data name="City.Vladivostok" xml:space="preserve">
+    <value>Vladivostok</value>
+  </data>
+  <data name="City.Yaroslavl" xml:space="preserve">
+    <value>Yaroslavl</value>
+  </data>
+  <data name="City.Yekaterinburg" xml:space="preserve">
+    <value>Yekaterinburg</value>
+  </data>
+
+  <data name="Landmark.RUB10.1997.Obverse.KrasnoyarskChapel" xml:space="preserve">
+    <value>Krasnoyarsk Chapel</value>
+  </data>
+  <data name="Landmark.RUB10.1997.Obverse.YeniseyBridge" xml:space="preserve">
+    <value>Yenisey Bridge</value>
+  </data>
+  <data name="Landmark.RUB10.1997.Reverse.KrasnoyarskHydroDam" xml:space="preserve">
+    <value>Krasnoyarsk Hydro Dam</value>
+  </data>
+  <data name="Landmark.RUB100.1997.Obverse.QuadrigaBolshoi" xml:space="preserve">
+    <value>Quadriga Bolshoi</value>
+  </data>
+  <data name="Landmark.RUB100.1997.Reverse.BolshoiTheatre" xml:space="preserve">
+    <value>Bolshoi Theatre</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Obverse.SpasskayaTower" xml:space="preserve">
+    <value>Spasskaya Tower</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Reverse.RzhevMemorial" xml:space="preserve">
+    <value>Rzhev Memorial</value>
+  </data>
+  <data name="Landmark.RUB1000.1997.Obverse.YaroslavTheWiseMonument" xml:space="preserve">
+    <value>Yaroslav The Wise Monument</value>
+  </data>
+  <data name="Landmark.RUB1000.1997.Obverse.YaroslavlChapel" xml:space="preserve">
+    <value>Yaroslavl Chapel</value>
+  </data>
+  <data name="Landmark.RUB1000.1997.Obverse.YaroslavlKremlin" xml:space="preserve">
+    <value>Yaroslavl Kremlin</value>
+  </data>
+  <data name="Landmark.RUB1000.1997.Reverse.ChurchOfJohnThePrecursor" xml:space="preserve">
+    <value>Church Of John The Precursor</value>
+  </data>
+  <data name="Landmark.RUB200.2017.Obverse.MonumentToSunkenShips" xml:space="preserve">
+    <value>Monument To Sunken Ships</value>
+  </data>
+  <data name="Landmark.RUB200.2017.Reverse.TauricChersonese" xml:space="preserve">
+    <value>Tauric Chersonese</value>
+  </data>
+  <data name="Landmark.RUB2000.2017.Obverse.RusskyBridge" xml:space="preserve">
+    <value>Russky Bridge</value>
+  </data>
+  <data name="Landmark.RUB2000.2017.Reverse.VostochnyCosmodrome" xml:space="preserve">
+    <value>Vostochny Cosmodrome</value>
+  </data>
+  <data name="Landmark.RUB5.1997.Obverse.MillenniumOfRussia" xml:space="preserve">
+    <value>Millennium Of Russia</value>
+  </data>
+  <data name="Landmark.RUB5.1997.Obverse.SophiaCathedral" xml:space="preserve">
+    <value>Sophia Cathedral</value>
+  </data>
+  <data name="Landmark.RUB5.1997.Reverse.NovgorodKremlinWall" xml:space="preserve">
+    <value>Novgorod Kremlin Wall</value>
+  </data>
+  <data name="Landmark.RUB50.1997.Obverse.PeterAndPaulFortress" xml:space="preserve">
+    <value>Peter And Paul Fortress</value>
+  </data>
+  <data name="Landmark.RUB50.1997.Obverse.RostralColumn" xml:space="preserve">
+    <value>Rostral Column</value>
+  </data>
+  <data name="Landmark.RUB50.1997.Reverse.StockExchange" xml:space="preserve">
+    <value>Stock Exchange</value>
+  </data>
+  <data name="Landmark.RUB500.1997.Obverse.PeterTheGreatMonument" xml:space="preserve">
+    <value>Peter The Great Monument</value>
+  </data>
+  <data name="Landmark.RUB500.1997.Obverse.SeaRiverPort" xml:space="preserve">
+    <value>Sea River Port</value>
+  </data>
+  <data name="Landmark.RUB500.1997.Obverse.SolovetskyMonastery" xml:space="preserve">
+    <value>Solovetsky Monastery</value>
+  </data>
+  <data name="Landmark.RUB5000.1997.Obverse.KhabarovskEmbankment" xml:space="preserve">
+    <value>Khabarovsk Embankment</value>
+  </data>
+  <data name="Landmark.RUB5000.1997.Obverse.MuravyovAmurskyMonument" xml:space="preserve">
+    <value>Muravyov Amursky Monument</value>
+  </data>
+  <data name="Landmark.RUB5000.1997.Reverse.AmurRiverBridge" xml:space="preserve">
+    <value>Amur River Bridge</value>
+  </data>
+  <data name="Landmark.RUB5000.2023.Obverse.CityCenter" xml:space="preserve">
+    <value>City Center</value>
+  </data>
+  <data name="Landmark.RUB5000.2023.Obverse.EuropeAsiaMonument" xml:space="preserve">
+    <value>Europe Asia Monument</value>
+  </data>
+  <data name="Landmark.RUB5000.2023.Obverse.FerrisWheel" xml:space="preserve">
+    <value>Ferris Wheel</value>
+  </data>
+  <data name="Landmark.RUB5000.2023.Reverse.66thParallel" xml:space="preserve">
+    <value>66th Parallel</value>
+  </data>
+  <data name="Landmark.RUB5000.2023.Reverse.UralMonument" xml:space="preserve">
+    <value>Ural Monument</value>
+  </data>
+
+  <data name="Security.Fibres.ColouredRedBlueAndGrey" xml:space="preserve">
+    <value>Fibres: Coloured Red Blue And Grey</value>
+  </data>
+  <data name="Security.Fibres.TwoTypes" xml:space="preserve">
+    <value>Fibres: Two Types</value>
+  </data>
+  <data name="Security.MachineReadableFeatures" xml:space="preserve">
+    <value>Machine Readable Features</value>
+  </data>
+  <data name="Security.Paper.WhiteCotton" xml:space="preserve">
+    <value>Paper: White Cotton</value>
+  </data>
+  <data name="Security.Paper.WhiteCotton.PolymerImpregnated" xml:space="preserve">
+    <value>Paper: White Cotton Polymer Impregnated</value>
+  </data>
+  <data name="Security.QRCode.ToCBRInfo" xml:space="preserve">
+    <value>QR code: To CBR Info</value>
+  </data>
+  <data name="Security.Tactile.RaisedPrint" xml:space="preserve">
+    <value>Tactile: Raised Print</value>
+  </data>
+  <data name="Security.Thread.Holographic3mm" xml:space="preserve">
+    <value>Thread: Holographic 3mm</value>
+  </data>
+  <data name="Security.Thread.WindowedMetallized" xml:space="preserve">
+    <value>Thread: Windowed Metallized</value>
+  </data>
+  <data name="Security.TwoSerialNumbers.Series2LettersPlus7Digits" xml:space="preserve">
+    <value>Two Serial Numbers: Series2 Letters Plus7 Digits</value>
+  </data>
+  <data name="Security.Watermark.MultitoneAndHighlight" xml:space="preserve">
+    <value>Watermark: Multitone And Highlight</value>
+  </data>
+
+  <data name="Trivia.RUB10.1997" xml:space="preserve">
+    <value>Trivia: 10 rubles (1997)</value>
+  </data>
+  <data name="Trivia.RUB100.1997" xml:space="preserve">
+    <value>Trivia: 100 rubles (1997)</value>
+  </data>
+  <data name="Trivia.RUB100.2022" xml:space="preserve">
+    <value>Trivia: 100 rubles (2022)</value>
+  </data>
+  <data name="Trivia.RUB1000.1997" xml:space="preserve">
+    <value>Trivia: 1000 rubles (1997)</value>
+  </data>
+  <data name="Trivia.RUB200.2017" xml:space="preserve">
+    <value>Trivia: 200 rubles (2017)</value>
+  </data>
+  <data name="Trivia.RUB2000.2017" xml:space="preserve">
+    <value>Trivia: 2000 rubles (2017)</value>
+  </data>
+  <data name="Trivia.RUB5.1997" xml:space="preserve">
+    <value>Trivia: 5 rubles (1997)</value>
+  </data>
+  <data name="Trivia.RUB50.1997" xml:space="preserve">
+    <value>Trivia: 50 rubles (1997)</value>
+  </data>
+  <data name="Trivia.RUB500.1997" xml:space="preserve">
+    <value>Trivia: 500 rubles (1997)</value>
+  </data>
+  <data name="Trivia.RUB5000.1997" xml:space="preserve">
+    <value>Trivia: 5000 rubles (1997)</value>
+  </data>
+  <data name="Trivia.RUB5000.2023" xml:space="preserve">
+    <value>Trivia: 5000 rubles (2023)</value>
+  </data>
+</root>
