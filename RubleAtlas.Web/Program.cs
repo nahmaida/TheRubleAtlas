@@ -20,6 +20,10 @@ namespace RubleAtlas.Web
             // Add localization support
             builder.Services.AddLocalization();
 
+            // Add blazor bootstrap support
+            // Not to be confused with bootstrap blazor
+            builder.Services.AddBlazorBootstrap();
+
             // Enable detailed errors
             if (builder.Environment.IsDevelopment())
             {

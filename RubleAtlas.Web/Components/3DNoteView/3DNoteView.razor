@@ -68,7 +68,7 @@
 
         // Get image paths and size for banknote
         var obversePhysical = ToPhysicalPath(ObverseRel);
-        using var image = Image.Load(obversePhysical);
+        using var image = SixLabors.ImageSharp.Image.Load(obversePhysical);
         var pxW = image.Width; // width in pixels
         var pxH = image.Height; // height in pixels
 
