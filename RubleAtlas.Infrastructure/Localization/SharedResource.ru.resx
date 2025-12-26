@@ -186,6 +186,15 @@
   <data name="City.Yekaterinburg" xml:space="preserve">
     <value>Екатеринбург</value>
   </data>
+  <data name="City.Kazan" xml:space="preserve">
+    <value>Казань</value>
+  </data>
+  <data name="City.NizhnyNovgorod" xml:space="preserve">
+    <value>Нижний Новгород</value>
+  </data>
+  <data name="City.Saratov" xml:space="preserve">
+    <value>Саратов</value>
+  </data>
 
   <data name="Landmark.RUB10.1997.Obverse.KrasnoyarskChapel" xml:space="preserve">
     <value>Часовня в Красноярске</value>
@@ -219,6 +228,21 @@
   </data>
   <data name="Landmark.RUB1000.1997.Reverse.ChurchOfJohnThePrecursor" xml:space="preserve">
     <value>Церковь Иоанна Предтечи</value>
+  </data>
+  <data name="Landmark.RUB1000.2025.Obverse.NikolskayaTowerNNKremlin" xml:space="preserve">
+    <value>Аверс: Никольская башня Нижегородского кремля</value>
+  </data>
+  <data name="Landmark.RUB1000.2025.Obverse.NizhnyNovgorodFair" xml:space="preserve">
+    <value>Аверс: Нижегородская ярмарка</value>
+  </data>
+  <data name="Landmark.RUB1000.2025.Obverse.NizhnyNovgorodStadium" xml:space="preserve">
+    <value>Аверс: Стадион «Нижний Новгород»</value>
+  </data>
+  <data name="Landmark.RUB1000.2025.Reverse.SaratovAutomobileBridge" xml:space="preserve">
+    <value>Реверс: Саратовский автомобильный мост</value>
+  </data>
+  <data name="Landmark.RUB1000.2025.Reverse.PalaceOfFarmers" xml:space="preserve">
+    <value>Реверс: Дворец земледельцев</value>
   </data>
   <data name="Landmark.RUB200.2017.Obverse.MonumentToSunkenShips" xml:space="preserve">
     <value>Памятник затопленным кораблям</value>
@@ -317,6 +341,15 @@
   <data name="Security.Watermark.MultitoneAndHighlight" xml:space="preserve">
     <value>Водяной знак: многотоновый и с высветлением</value>
   </data>
+  <data name="Security.Fibres.TwoTypes.RedBlueSegmentsAndGrey" xml:space="preserve">
+    <value>Волокна: двух типов красно-синие сегменты и серые</value>
+  </data>
+  <data name="Security.Thread.Holographic.Windowed5_5mm.ShapedWindow" xml:space="preserve">
+    <value>Защитная нить: голографическая оконная 5,5 мм фигурное окно</value>
+  </data>
+  <data name="Security.TwoSerialNumbers.Series2LettersPlus9Digits.Orientations.ShortAndLongSides" xml:space="preserve">
+    <value>Два серийных номера: Серия: 2 буквы + 9 цифр Ориентация по короткой и длинной сторонам</value>
+  </data>
 
   <data name="Trivia.RUB10.1997" xml:space="preserve">
     <value>Факты: 10 рублей (1997)</value>
@@ -329,6 +362,9 @@
   </data>
   <data name="Trivia.RUB1000.1997" xml:space="preserve">
     <value>Факты: 1000 рублей (1997)</value>
+  </data>
+  <data name="Trivia.RUB1000.2025" xml:space="preserve">
+    <value>Факты: 1000 рублей (2025)</value>
   </data>
   <data name="Trivia.RUB200.2017" xml:space="preserve">
     <value>Факты: 200 рублей (2017)</value>

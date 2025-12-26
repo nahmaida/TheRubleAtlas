@@ -350,7 +350,73 @@
         "reverseUrl": "/images/rub-1000-1997-reverse.jpg"
       },
       "sources": {
-        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/1000rub/"
+        "bankOfRussiaInfoUrl": "https://www.cbr.ru/cash_circulation/banknotes/1000rub/?tab.current=y1997/"
+      }
+    },
+
+    {
+      "id": "rub-1000-2025",
+      "denomination": 1000,
+      "year": 2025,
+      "color": "#97C7C5",
+      "places": {
+        "obverse": [
+          {
+            "cityKey": "City.NizhnyNovgorod",
+            "lat": 56.3256782606557,
+            "lng": 44.00138014053833,
+            "landmarkKey": "Landmark.RUB1000.2025.Obverse.NikolskayaTowerNNKremlin"
+          },
+          {
+            "cityKey": "City.NizhnyNovgorod",
+            "lat": 56.32833820385357,
+            "lng": 43.96139632661396,
+            "landmarkKey": "Landmark.RUB1000.2025.Obverse.NizhnyNovgorodFair"
+          },
+          {
+            "cityKey": "City.NizhnyNovgorod",
+            "lat": 56.33746224995209,
+            "lng": 43.96326911390424,
+            "landmarkKey": "Landmark.RUB1000.2025.Obverse.NizhnyNovgorodStadium"
+          }
+        ],
+        "reverse": [
+          {
+            "cityKey": "City.Saratov",
+            "lat": 51.51524138735037,
+            "lng": 46.07166071937073,
+            "landmarkKey": "Landmark.RUB1000.2025.Reverse.SaratovAutomobileBridge"
+          },
+          {
+            "cityKey": "City.Kazan",
+            "lat": 55.800446257922324,
+            "lng": 49.11193735577967,
+            "landmarkKey": "Landmark.RUB1000.2025.Reverse.PalaceOfFarmers"
+          }
+        ]
+      },
+
+      "text": {
+        "triviaKey": "Trivia.RUB1000.2025"
+      },
+
+      "security": {
+        "highlightsKeys": [
+          "Security.QRCode.ToCBRInfo",
+          "Security.Paper.WhiteCotton",
+          "Security.Fibres.TwoTypes.RedBlueSegmentsAndGrey",
+          "Security.Thread.Holographic.Windowed5_5mm.ShapedWindow",
+          "Security.TwoSerialNumbers.Series2LettersPlus9Digits.Orientations.ShortAndLongSides"
+        ]
+      },
+
+      "images": {
+        "obverseUrl": "/images/rub-1000-2025-obverse.jpg",
+        "reverseUrl": "/images/rub-1000-2025-reverse.jpg"
+      },
+
+      "sources": {
+        "bankOfRussiaInfoUrl": "https://cbr.ru/cash_circulation/banknotes/1000rub/"
       }
     },
 

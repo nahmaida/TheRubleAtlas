@@ -186,6 +186,15 @@
   <data name="City.Yekaterinburg" xml:space="preserve">
     <value>Yekaterinburg</value>
   </data>
+	<data name="City.Kazan" xml:space="preserve">
+    <value>Kazan</value>
+  </data>
+	<data name="City.NizhnyNovgorod" xml:space="preserve">
+    <value>Nizhny Novgorod</value>
+  </data>
+	<data name="City.Saratov" xml:space="preserve">
+    <value>Saratov</value>
+  </data>
 
   <data name="Landmark.RUB10.1997.Obverse.KrasnoyarskChapel" xml:space="preserve">
     <value>Krasnoyarsk Chapel</value>
@@ -216,6 +225,21 @@
   </data>
   <data name="Landmark.RUB1000.1997.Obverse.YaroslavlKremlin" xml:space="preserve">
     <value>Yaroslavl Kremlin</value>
+  </data>
+  <data name="Landmark.RUB1000.2025.Obverse.NikolskayaTowerNNKremlin" xml:space="preserve">
+    <value>Obverse: Nikolskaya Tower NN Kremlin</value>
+  </data>
+	<data name="Landmark.RUB1000.2025.Obverse.NizhnyNovgorodFair" xml:space="preserve">
+    <value>Obverse: Nizhny Novgorod Fair</value>
+  </data>
+	<data name="Landmark.RUB1000.2025.Obverse.NizhnyNovgorodStadium" xml:space="preserve">
+    <value>Obverse: Nizhny Novgorod Stadium</value>
+  </data>
+	<data name="Landmark.RUB1000.2025.Reverse.SaratovAutomobileBridge" xml:space="preserve">
+    <value>Reverse: Saratov Automobile Bridge</value>
+  </data>
+	<data name="Landmark.RUB1000.2025.Reverse.PalaceOfFarmers" xml:space="preserve">
+    <value>Reverse: Palace Of Farmers</value>
   </data>
   <data name="Landmark.RUB1000.1997.Reverse.ChurchOfJohnThePrecursor" xml:space="preserve">
     <value>Church Of John The Precursor</value>
@@ -317,6 +341,15 @@
   <data name="Security.Watermark.MultitoneAndHighlight" xml:space="preserve">
     <value>Watermark: Multitone And Highlight</value>
   </data>
+  <data name="Security.Fibres.TwoTypes.RedBlueSegmentsAndGrey" xml:space="preserve">
+    <value>Fibres: Two Types Red Blue Segments And Grey</value>
+  </data>
+	<data name="Security.Thread.Holographic.Windowed5_5mm.ShapedWindow" xml:space="preserve">
+    <value>Thread: Holographic Windowed5_5mm Shaped Window</value>
+  </data>
+	<data name="Security.TwoSerialNumbers.Series2LettersPlus9Digits.Orientations.ShortAndLongSides" xml:space="preserve">
+    <value>Two Serial Numbers: Series2Letters Plus9Digits Orientations Short And Long Sides</value>
+  </data>
 
   <data name="Trivia.RUB10.1997" xml:space="preserve">
     <value>Trivia: 10 rubles (1997)</value>
@@ -329,6 +362,9 @@
   </data>
   <data name="Trivia.RUB1000.1997" xml:space="preserve">
     <value>Trivia: 1000 rubles (1997)</value>
+  </data>
+  <data name="Trivia.RUB1000.2025" xml:space="preserve">
+    <value>Trivia: 1000 rubles (2025)</value>
   </data>
   <data name="Trivia.RUB200.2017" xml:space="preserve">
     <value>Trivia: 200 rubles (2017)</value>
