@@ -62,6 +62,10 @@
     <ProjectReference Include="..\RubleAtlas.Infrastructure\RubleAtlas.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\places\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
