@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.3",
+  "schemaVersion": "1.4",
   "currency": "RUB",
   "notes": [
     {
@@ -188,6 +188,36 @@
             "lat": 55.75250717264569,
             "lng": 37.62131116982349,
             "landmarkKey": "Landmark.RUB100.2022.Obverse.SpasskayaTower"
+          },
+          {
+            "cityKey": "City.Moscow",
+            "lat": 55.75520833333333,
+            "lng": 37.62062777777778,
+            "landmarkKey": "Landmark.RUB100.2022.Obverse.SpasskayaTower"
+          },
+          {
+            "cityKey": "City.Moscow",
+            "lat": 55.702892167855154,
+            "lng": 37.53058437217951,
+            "landmarkKey": "Landmark.RUB100.2022.Obverse.MGUMainBuilding"
+          },
+          {
+            "cityKey": "City.Moscow",
+            "lat": 55.74907,
+            "lng": 37.63968,
+            "landmarkKey": "Landmark.RUB100.2022.Obverse.ZaryadyeParkGlassDome"
+          },
+          {
+            "cityKey": "City.Moscow",
+            "lat": 55.71727146235056,
+            "lng": 37.61144299507504,
+            "landmarkKey": "Landmark.RUB100.2022.Obverse.ShukhonTower"
+          },
+          {
+            "cityKey": "City.Moscow",
+            "lat": 55.8196654878400,
+            "lng": 37.61161417013281,
+            "landmarkKey": "Landmark.RUB100.2022.Obverse.OstankinskayaTower"
           }
         ],
         "reverse": [
@@ -196,6 +226,12 @@
             "lat": 56.218570211144,
             "lng": 34.262741560446706,
             "landmarkKey": "Landmark.RUB100.2022.Reverse.RzhevMemorial"
+          },
+          {
+            "cityKey": "City.Tula",
+            "lat": 53.62301585193277,
+            "lng": 38.674235420912545,
+            "landmarkKey": "Landmark.RUB100.2022.Reverse.KulikovoField"
           }
         ]
       },
@@ -529,6 +565,12 @@
             "lat": 56.8151083514124,
             "lng": 60.540617038758846,
             "landmarkKey": "Landmark.RUB5000.2023.Obverse.FerrisWheel"
+          },
+          {
+            "cityKey": "City.Yekaterinburg",
+            "lat": 56.8392024702144,
+            "lng":  60.60654950362009,
+            "landmarkKey": "Landmark.RUB5000.2023.Obverse.SevastyanovHouse"
           }
         ],
         "reverse": [

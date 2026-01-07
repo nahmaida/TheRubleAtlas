@@ -141,7 +141,7 @@
   <data name="Read_More" xml:space="preserve">
     <value>Read more...</value>
   </data>
-    <data name="City.Arkhangelsk" xml:space="preserve">
+  <data name="City.Arkhangelsk" xml:space="preserve">
     <value>Arkhangelsk</value>
   </data>
   <data name="City.Chelyabinsk" xml:space="preserve">
@@ -186,16 +186,15 @@
   <data name="City.Yekaterinburg" xml:space="preserve">
     <value>Yekaterinburg</value>
   </data>
-	<data name="City.Kazan" xml:space="preserve">
+  <data name="City.Kazan" xml:space="preserve">
     <value>Kazan</value>
   </data>
-	<data name="City.NizhnyNovgorod" xml:space="preserve">
+  <data name="City.NizhnyNovgorod" xml:space="preserve">
     <value>Nizhny Novgorod</value>
   </data>
-	<data name="City.Saratov" xml:space="preserve">
+  <data name="City.Saratov" xml:space="preserve">
     <value>Saratov</value>
   </data>
-
   <data name="Landmark.RUB10.1997.Obverse.KrasnoyarskChapel" xml:space="preserve">
     <value>Krasnoyarsk Chapel</value>
   </data>
@@ -215,7 +214,7 @@
     <value>Spasskaya Tower</value>
   </data>
   <data name="Landmark.RUB100.2022.Reverse.RzhevMemorial" xml:space="preserve">
-    <value>Rzhev Memorial</value>
+    <value>Rzhev Memorial to the Soviet Soldier</value>
   </data>
   <data name="Landmark.RUB1000.1997.Obverse.YaroslavTheWiseMonument" xml:space="preserve">
     <value>Yaroslav The Wise Monument</value>
@@ -227,19 +226,19 @@
     <value>Yaroslavl Kremlin</value>
   </data>
   <data name="Landmark.RUB1000.2025.Obverse.NikolskayaTowerNNKremlin" xml:space="preserve">
-    <value>Obverse: Nikolskaya Tower NN Kremlin</value>
+    <value>Nikolskaya Tower of the Nizhny Novgorod Kremlin</value>
   </data>
-	<data name="Landmark.RUB1000.2025.Obverse.NizhnyNovgorodFair" xml:space="preserve">
-    <value>Obverse: Nizhny Novgorod Fair</value>
+  <data name="Landmark.RUB1000.2025.Obverse.NizhnyNovgorodFair" xml:space="preserve">
+    <value>Nizhny Novgorod Fair</value>
   </data>
-	<data name="Landmark.RUB1000.2025.Obverse.NizhnyNovgorodStadium" xml:space="preserve">
-    <value>Obverse: Nizhny Novgorod Stadium</value>
+  <data name="Landmark.RUB1000.2025.Obverse.NizhnyNovgorodStadium" xml:space="preserve">
+    <value>Nizhny Novgorod Stadium</value>
   </data>
-	<data name="Landmark.RUB1000.2025.Reverse.SaratovAutomobileBridge" xml:space="preserve">
-    <value>Reverse: Saratov Automobile Bridge</value>
+  <data name="Landmark.RUB1000.2025.Reverse.SaratovAutomobileBridge" xml:space="preserve">
+    <value>Saratov Automobile Bridge</value>
   </data>
-	<data name="Landmark.RUB1000.2025.Reverse.PalaceOfFarmers" xml:space="preserve">
-    <value>Reverse: Palace Of Farmers</value>
+  <data name="Landmark.RUB1000.2025.Reverse.PalaceOfFarmers" xml:space="preserve">
+    <value>Palace Of Farmers</value>
   </data>
   <data name="Landmark.RUB1000.1997.Reverse.ChurchOfJohnThePrecursor" xml:space="preserve">
     <value>Church Of John The Precursor</value>
@@ -257,7 +256,7 @@
     <value>Vostochny Cosmodrome</value>
   </data>
   <data name="Landmark.RUB5.1997.Obverse.MillenniumOfRussia" xml:space="preserve">
-    <value>Millennium Of Russia</value>
+    <value>Millennium Of Russia Monument</value>
   </data>
   <data name="Landmark.RUB5.1997.Obverse.SophiaCathedral" xml:space="preserve">
     <value>Sophia Cathedral</value>
@@ -307,7 +306,6 @@
   <data name="Landmark.RUB5000.2023.Reverse.UralMonument" xml:space="preserve">
     <value>Ural Monument</value>
   </data>
-
   <data name="Security.Fibres.ColouredRedBlueAndGrey" xml:space="preserve">
     <value>Fibres: Coloured Red Blue And Grey</value>
   </data>
@@ -344,13 +342,12 @@
   <data name="Security.Fibres.TwoTypes.RedBlueSegmentsAndGrey" xml:space="preserve">
     <value>Fibres: Two Types Red Blue Segments And Grey</value>
   </data>
-	<data name="Security.Thread.Holographic.Windowed5_5mm.ShapedWindow" xml:space="preserve">
+  <data name="Security.Thread.Holographic.Windowed5_5mm.ShapedWindow" xml:space="preserve">
     <value>Thread: Holographic Windowed5_5mm Shaped Window</value>
   </data>
-	<data name="Security.TwoSerialNumbers.Series2LettersPlus9Digits.Orientations.ShortAndLongSides" xml:space="preserve">
+  <data name="Security.TwoSerialNumbers.Series2LettersPlus9Digits.Orientations.ShortAndLongSides" xml:space="preserve">
     <value>Two Serial Numbers: Series2Letters Plus9Digits Orientations Short And Long Sides</value>
   </data>
-
   <data name="Trivia.RUB10.1997" xml:space="preserve">
     <value>Trivia: 10 rubles (1997)</value>
   </data>
@@ -386,5 +383,29 @@
   </data>
   <data name="Trivia.RUB5000.2023" xml:space="preserve">
     <value>Trivia: 5000 rubles (2023)</value>
+  </data>
+  <data name="GoToPlace" xml:space="preserve">
+    <value>Go to place</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Obverse.MGUMainBuilding" xml:space="preserve">
+    <value>MGU Main Building</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Obverse.ZaryadyeParkGlassDome" xml:space="preserve">
+    <value>Zaryadye Park Glass Dome</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Obverse.ShukhonTower" xml:space="preserve">
+    <value>Shabolovskaya TV Tower</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Obverse.OstankinskayaTower" xml:space="preserve">
+    <value>Ostankinskaya TV Tower</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Reverse.KulikovoField" xml:space="preserve">
+    <value>Kulikovo Field Museum-Reserve</value>
+  </data>
+  <data name="Landmark.RUB5000.2023.Obverse.SevastyanovHouse" xml:space="preserve">
+    <value>Sevastyanov House</value>
+  </data>
+  <data name="City.Tula" xml:space="preserve">
+    <value>Tula</value>
   </data>
 </root>

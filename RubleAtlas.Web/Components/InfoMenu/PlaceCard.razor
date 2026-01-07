@@ -1,0 +1,20 @@
+@using RubleAtlas.Domain
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
+
+<Card Class="mb-4 placeCard h-100" Color="CardColor.Dark" TextAlignment="Alignment.Center" Style="@(
+    $"background-image: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%), url('/images/places/{Place.LandmarkKey}.webp');" +
+    "background-size:cover;" +
+    "background-position:center;"
+ )">
+    >
+    <CardBody>
+        <CardTitle>@L[@Place.CityKey]: @L[@Place.LandmarkKey]</CardTitle>
+        <Button Color="ButtonColor.Warning" To="#" Type="ButtonType.Link">@L["GoToPlace"]</Button>
+    </CardBody>
+</Card>
+
+@code {
+    [Parameter]
+    public Place Place { get; set; }
+}

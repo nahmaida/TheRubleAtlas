@@ -141,7 +141,7 @@
   <data name="Read_More" xml:space="preserve">
     <value>Узнать больше...</value>
   </data>
-    <data name="City.Arkhangelsk" xml:space="preserve">
+  <data name="City.Arkhangelsk" xml:space="preserve">
     <value>Архангельск</value>
   </data>
   <data name="City.Chelyabinsk" xml:space="preserve">
@@ -195,7 +195,6 @@
   <data name="City.Saratov" xml:space="preserve">
     <value>Саратов</value>
   </data>
-
   <data name="Landmark.RUB10.1997.Obverse.KrasnoyarskChapel" xml:space="preserve">
     <value>Часовня в Красноярске</value>
   </data>
@@ -215,7 +214,7 @@
     <value>Спасская башня</value>
   </data>
   <data name="Landmark.RUB100.2022.Reverse.RzhevMemorial" xml:space="preserve">
-    <value>Ржевский мемориал</value>
+    <value>Ржевский мемориал Советскому Cолдату</value>
   </data>
   <data name="Landmark.RUB1000.1997.Obverse.YaroslavTheWiseMonument" xml:space="preserve">
     <value>Памятник Ярославу Мудрому</value>
@@ -226,23 +225,23 @@
   <data name="Landmark.RUB1000.1997.Obverse.YaroslavlKremlin" xml:space="preserve">
     <value>Ярославский кремль</value>
   </data>
-  <data name="Landmark.RUB1000.1997.Reverse.ChurchOfJohnThePrecursor" xml:space="preserve">
-    <value>Церковь Иоанна Предтечи</value>
-  </data>
   <data name="Landmark.RUB1000.2025.Obverse.NikolskayaTowerNNKremlin" xml:space="preserve">
-    <value>Аверс: Никольская башня Нижегородского кремля</value>
+    <value>Никольская башня Нижегородского кремля</value>
   </data>
   <data name="Landmark.RUB1000.2025.Obverse.NizhnyNovgorodFair" xml:space="preserve">
-    <value>Аверс: Нижегородская ярмарка</value>
+    <value>Нижегородская ярмарка</value>
   </data>
   <data name="Landmark.RUB1000.2025.Obverse.NizhnyNovgorodStadium" xml:space="preserve">
-    <value>Аверс: Стадион «Нижний Новгород»</value>
+    <value>Стадион «Нижний Новгород»</value>
   </data>
   <data name="Landmark.RUB1000.2025.Reverse.SaratovAutomobileBridge" xml:space="preserve">
-    <value>Реверс: Саратовский автомобильный мост</value>
+    <value>Саратовский автомобильный мост</value>
   </data>
   <data name="Landmark.RUB1000.2025.Reverse.PalaceOfFarmers" xml:space="preserve">
-    <value>Реверс: Дворец земледельцев</value>
+    <value>Дворец земледельцев</value>
+  </data>
+  <data name="Landmark.RUB1000.1997.Reverse.ChurchOfJohnThePrecursor" xml:space="preserve">
+    <value>Церковь Иоанна Предтечи</value>
   </data>
   <data name="Landmark.RUB200.2017.Obverse.MonumentToSunkenShips" xml:space="preserve">
     <value>Памятник затопленным кораблям</value>
@@ -307,7 +306,6 @@
   <data name="Landmark.RUB5000.2023.Reverse.UralMonument" xml:space="preserve">
     <value>Уральский монумент</value>
   </data>
-
   <data name="Security.Fibres.ColouredRedBlueAndGrey" xml:space="preserve">
     <value>Волокна: цветные (красные, синие и серые)</value>
   </data>
@@ -350,7 +348,6 @@
   <data name="Security.TwoSerialNumbers.Series2LettersPlus9Digits.Orientations.ShortAndLongSides" xml:space="preserve">
     <value>Два серийных номера: Серия: 2 буквы + 9 цифр Ориентация по короткой и длинной сторонам</value>
   </data>
-
   <data name="Trivia.RUB10.1997" xml:space="preserve">
     <value>Факты: 10 рублей (1997)</value>
   </data>
@@ -386,5 +383,29 @@
   </data>
   <data name="Trivia.RUB5000.2023" xml:space="preserve">
     <value>Факты: 5000 рублей (2023)</value>
+  </data>
+  <data name="GoToPlace" xml:space="preserve">
+    <value>Перейти</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Obverse.MGUMainBuilding" xml:space="preserve">
+    <value>Главный корпус МГУ</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Obverse.ZaryadyeParkGlassDome" xml:space="preserve">
+    <value>Стеклянный купол из парка «Зарядье»</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Obverse.ShukhonTower" xml:space="preserve">
+    <value>Шаболовская (Шуховская) телебашня</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Obverse.OstankinskayaTower" xml:space="preserve">
+    <value>Останкинская телебашня</value>
+  </data>
+  <data name="Landmark.RUB100.2022.Reverse.KulikovoField" xml:space="preserve">
+    <value>Музей-заповедник «Куликово поле»</value>
+  </data>
+  <data name="Landmark.RUB5000.2023.Obverse.SevastyanovHouse" xml:space="preserve">
+    <value>Дом Н. И. Севастьянова</value>
+  </data>
+  <data name="City.Tula" xml:space="preserve">
+    <value>Тула</value>
   </data>
 </root>
