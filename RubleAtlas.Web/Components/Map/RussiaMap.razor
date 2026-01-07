@@ -9,7 +9,7 @@
     @if (_selectedNote != null)
     {
         <div class="note-panel" @onclick:stopPropagation="true">
-            <InfoMenu Banknote="_selectedNote" Place="_selectedPlace" Open="true"></InfoMenu>
+            <InfoMenu Banknote="_selectedNote" Place="_selectedPlace" Open="true" OnClose="CloseInfoMenu"></InfoMenu>
         </div>
     }
 </div>
@@ -160,6 +160,12 @@
             _selectedNote = note;
             _selectedPlace = place;
         }
+    }
+
+    private void CloseInfoMenu()
+    {
+        _selectedNote = null;
+        _selectedPlace = null;
     }
 
     /// <summary>

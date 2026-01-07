@@ -38,7 +38,13 @@
     [Parameter]
     public Place Place { get; set; }
     [Parameter]
+    public EventCallback OnClose { get; set; }
+    [Parameter]
     public bool Open { get; set; }
 
-    private void ToggleOpen() => Open = !Open;
+    private void ToggleOpen()
+    {
+        Open = !Open;
+        if (!Open) OnClose.InvokeAsync();
+    }
 }
