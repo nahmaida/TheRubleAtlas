@@ -1,4 +1,10 @@
 ﻿.placeCard {
     background-size: cover;
     background-position: center;
+    height: 100%;
+}
+
+.goButton {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }

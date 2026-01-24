@@ -10,8 +10,12 @@
     >
     <CardBody>
         <CardTitle>@L[@Place.CityKey]: @L[@Place.LandmarkKey]</CardTitle>
-        <Button Color="ButtonColor.Warning" To="#" Type="ButtonType.Link">@L["GoToPlace"]</Button>
     </CardBody>
+    <CardFooter Class="bg-transparent border-0 pb-3">
+        <div class="goButton">
+            <Button Color="ButtonColor.Warning" To="#" Type="ButtonType.Link">@L["GoToPlace"]</Button>
+        </div>
+    </CardFooter>
 </Card>
 
 @code {
