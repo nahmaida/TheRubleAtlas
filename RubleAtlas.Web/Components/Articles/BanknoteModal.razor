@@ -1,0 +1,63 @@
+﻿@using RubleAtlas.Domain
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
+
+<div class="modal-backdrop-modern @(IsVisible ? "d-flex" : "d-none")" @onclick="CloseModal">
+    @if (IsVisible && Banknote != null)
+    {
+        <div class="article-modal-card" @onclick:stopPropagation="true">
+            
+            <div class="modal-header-sticky">
+                <h3 class="modal-title text-truncate">@L[Banknote.Name]</h3>
+                <button type="button" class="btn-close-modern" aria-label="Close" @onclick="CloseModal">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <div class="modal-body-scrollable">
+                <div class="article-hero-3d border-bottom">
+                    <RubleAtlas.Web.Components._3DNoteView._3DNoteView @key="Banknote.Name" Banknote="Banknote" />
+                </div>
+
+                <article class="article-content">
+                    @if (ChildContent != null)
+                    {
+                        @ChildContent
+                    }
+                    else
+                    {
+                        <p class="lead fw-normal text-muted">
+                            The @L[Banknote.Name] is a significant piece of currency, featuring detailed historical and geographical landmarks that represent the cultural heritage of the region.
+                        </p>
+                        
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim.
+                        </p>
+
+                        <h4 class="mt-4 mb-3 fw-bold">History & Design</h4>
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+
+                        <blockquote class="blockquote-modern my-4">
+                            "Banknotes are the business cards of a nation."
+                        </blockquote>
+                    }
+                </article>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public bool IsVisible { get; set; }
+    [Parameter] public EventCallback<bool> IsVisibleChanged { get; set; }
+    [Parameter] public Banknote? Banknote { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    private async Task CloseModal()
+    {
+        IsVisible = false;
+        await IsVisibleChanged.InvokeAsync(IsVisible);
+    }
+}

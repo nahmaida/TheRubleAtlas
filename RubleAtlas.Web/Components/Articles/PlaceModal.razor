@@ -1,0 +1,76 @@
+﻿@inject IJSRuntime JS
+
+@if (IsVisible)
+{
+    @* some bullshit to make it come up on top *@
+    <div @ref="modalRef" popover="manual" class="modal-backdrop-modern top-layer-modal" @onclick="CloseModal">
+        <div class="article-modal-card" @onclick:stopPropagation="true">
+            
+            <div class="modal-header-sticky">
+                <h3 class="modal-title text-truncate">@PlaceName</h3>
+                <button type="button" class="btn-close-modern" aria-label="Close" @onclick="CloseModal">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <div class="modal-body-scrollable">
+                @if (!string.IsNullOrWhiteSpace(ImageUrl))
+                {
+                    <div class="article-hero-image">
+                        <img src="@ImageUrl" alt="@PlaceName" />
+                    </div>
+                }
+
+                <article class="article-content">
+                    @if (ChildContent != null)
+                    {
+                        @ChildContent
+                    }
+                    else
+                    {
+                        <p class="lead fw-normal text-muted">
+                            @PlaceName is a renowned landmark recognized for its historical, architectural, and cultural importance.
+                        </p>
+                        
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+
+                        <h4 class="mt-4 mb-3 fw-bold">Significance</h4>
+                        <p>
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    }
+                </article>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public bool IsVisible { get; set; }
+    [Parameter] public EventCallback<bool> IsVisibleChanged { get; set; }
+    [Parameter] public string PlaceName { get; set; } = "Place Details";
+    [Parameter] public string? ImageUrl { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    private ElementReference modalRef;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (IsVisible)
+        {
+            // 1. Define a global wrapper function dynamically if it doesn't exist
+            await JS.InvokeVoidAsync("eval", "window.showPopoverElement = (el) => el && typeof el.showPopover === 'function' && el.showPopover();");
+            
+            // 2. Invoke it safely, passing the Blazor ElementReference as an actual parameter
+            await JS.InvokeVoidAsync("showPopoverElement", modalRef);
+        }
+    }
+
+    private async Task CloseModal()
+    {
+        IsVisible = false;
+        await IsVisibleChanged.InvokeAsync(IsVisible);
+    }
+}

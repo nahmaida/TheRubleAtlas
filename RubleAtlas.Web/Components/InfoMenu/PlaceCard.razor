@@ -1,5 +1,6 @@
 @using RubleAtlas.Domain
 @using Microsoft.Extensions.Localization
+@using RubleAtlas.Web.Components.Articles
 @inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
 
 <div class="place-card-wrapper h-100 w-100">
@@ -13,13 +14,25 @@
         </CardBody>
         <CardFooter Class="bg-transparent border-0 pb-3">
             <div class="goButton">
-                <Button Color="ButtonColor.Warning" To="#" Type="ButtonType.Link">@L["GoToPlace"]</Button>
+                <Button Color="ButtonColor.Warning" @onclick="() => NavigateToDetails()" Type="ButtonType.Link">@L["GoToPlace"]</Button>
             </div>
         </CardFooter>
     </Card>
 </div>
 
+<PlaceModal @bind-IsVisible="isArticleModalOpen" 
+            PlaceName="@L[@Place.LandmarkKey]"
+            ImageUrl="@($"/images/places/{Place.LandmarkKey}.webp")">
+    <!-- custom text here -->
+</PlaceModal>
+
 @code {
     [Parameter]
     public Place Place { get; set; } = default!;
+    private bool isArticleModalOpen = false;
+
+    private void NavigateToDetails()
+    {
+        isArticleModalOpen = true;
+    }
 }

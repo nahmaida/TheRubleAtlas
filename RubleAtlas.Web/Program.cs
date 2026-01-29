@@ -38,11 +38,13 @@ namespace RubleAtlas.Web
             var app = builder.Build();
 
             // Configure localization
-            var supportedCultures = new[] { "en", "ru" };
+            var supportedCultures = new[] { "ru", "en" };
             var localizationOptions = new RequestLocalizationOptions()
                 .SetDefaultCulture(supportedCultures[0])
                 .AddSupportedCultures(supportedCultures)
                 .AddSupportedUICultures(supportedCultures);
+
+            Console.WriteLine(supportedCultures[0]);
 
             app.UseRequestLocalization(localizationOptions);
 
