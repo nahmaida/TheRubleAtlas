@@ -1,6 +1,5 @@
 using RubleAtlas.Infrastructure.Storage.JSON;
 using RubleAtlas.Web.Components;
-using MudBlazor.Services;
 
 namespace RubleAtlas.Web
 {
@@ -21,8 +20,9 @@ namespace RubleAtlas.Web
             // Add localization support
             builder.Services.AddLocalization();
 
-            // Add mudblazor
-            builder.Services.AddMudServices();
+            // Add blazor bootstrap support
+            // Not to be confused with bootstrap blazor
+            builder.Services.AddBlazorBootstrap();
 
             // Enable detailed errors
             if (builder.Environment.IsDevelopment())
