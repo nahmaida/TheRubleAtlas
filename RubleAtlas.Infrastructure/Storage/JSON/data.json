@@ -191,12 +191,6 @@
           },
           {
             "cityKey": "City.Moscow",
-            "lat": 55.75520833333333,
-            "lng": 37.62062777777778,
-            "landmarkKey": "Landmark.RUB100.2022.Obverse.SpasskayaTower"
-          },
-          {
-            "cityKey": "City.Moscow",
             "lat": 55.702892167855154,
             "lng": 37.53058437217951,
             "landmarkKey": "Landmark.RUB100.2022.Obverse.MGUMainBuilding"
