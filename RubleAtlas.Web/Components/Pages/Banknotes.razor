@@ -1,19 +1,115 @@
 ﻿@page "/banknotes"
 @rendermode InteractiveServer
+@using RubleAtlas.Domain
+@using RubleAtlas.Infrastructure.Storage.JSON
+@using RubleAtlas.Web.Components.Articles
+@using RubleAtlas.Web.Components.InfoMenu
+@inject JSONStorage Storage
+@inject NavigationManager NavManager
 
 <PageTitle>Banknotes</PageTitle>
 
-<h1>Counter</h1>
+<div class="scroll-wrapper">
+    <div class="container-fluid py-5 px-3 px-md-4 px-lg-5">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-dark mb-2 tracking-tight">Explore Banknotes</h1>
+            <p class="text-muted fs-5">Discover the history and landmarks behind the currency.</p>
+        </div>
 
-<p role="status">Current count: @currentCount</p>
+        @if (banknotes == null)
+        {
+            <div class="d-flex justify-content-center align-items-center" style="min-height: 40vh;">
+                <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row g-4 justify-content-center">
+                @foreach (var note in banknotes)
+                {
+                    <div class="col-12 col-xl-10">
+                        <div class="banknote-card"
+                             style="background: linear-gradient(-135deg, #ffffff 40%, @note.Color 140%);"
+                             @onclick="() => NavigateToDetails(note)">
+                
+                            <div class="card-content-wrapper">
+                                <div class="banknote-visual">
+                                    <img src="/images/banknotes/rub-@note.Denomination-@note.Year-obverse.jpg"
+                                         alt="@note.Denomination Ruble Banknote"
+                                         class="banknote-img" />
+                        
+                                    <div class="explore-action">
+                                        <span class="explore-text">View Details</span>
+                                        <i class="bi bi-arrow-right-short fs-4"></i>
+                                    </div>
+                                </div>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+                                <div class="banknote-details">
+                                    <div class="details-header">
+                                        <div>
+                                            <h2 class="denomination-title">@note.Denomination ₽</h2>
+                                            <span class="badge rounded-pill text-bg-light border text-secondary fw-medium px-3 py-2">
+                                                @note.Year Series
+                                            </span>
+                                        </div>
+                                    </div>
+                        
+                                    <h6 class="carousel-heading text-uppercase text-muted fw-bold tracking-wide mt-4 mb-3">
+                                        Featured Landmarks
+                                    </h6>
+                        
+                                    <div class="carousel-container">
+                                        <div class="carousel" @onclick:stopPropagation="true">
+                                            @if (note.ObversePlaces != null)
+                                            {
+                                                @foreach (var place in note.ObversePlaces)
+                                                {
+                                                    <div class="carousel-item-modern">
+                                                        <PlaceCard Place="@place" />
+                                                    </div>
+                                                }
+                                            }
+                                            @if (note.ReversePlaces != null)
+                                            {
+                                                @foreach (var place in note.ReversePlaces)
+                                                {
+                                                    <div class="carousel-item-modern">
+                                                        <PlaceCard Place="@place" />
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+@* <BanknoteModal @bind-IsVisible="isArticleModalOpen" 
+              Banknote="@activeModalBanknote">
+    <!-- custom text here -->
+</BanknoteModal> *@
 
 @code {
-    private int currentCount = 0;
+    private bool isArticleModalOpen = false;
+    private Banknote? activeModalBanknote = null;
+    private List<Banknote>? banknotes;
 
-    private void IncrementCount()
+    protected override void OnInitialized()
     {
-        currentCount++;
+        banknotes = Storage.GetBanknotes();
+    }
+
+    private void NavigateToDetails(Banknote note)
+    {
+        activeModalBanknote = note;
+        isArticleModalOpen = true;
     }
 }

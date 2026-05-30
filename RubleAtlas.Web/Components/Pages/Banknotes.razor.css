@@ -1,0 +1,167 @@
+﻿/* -- Core Layout -- */
+.scroll-wrapper {
+    overflow-y: auto;
+    height: 100%;
+    padding-bottom: 4rem;
+    background-color: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.tracking-tight {
+    letter-spacing: -0.02em;
+}
+
+.tracking-wide {
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+}
+
+/* -- Card Container -- */
+.banknote-card {
+    position: relative;
+    border-radius: 24px;
+    padding: 2rem;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+    .banknote-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+/* Subtle background glow based on banknote color */
+.card-glow {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.card-content-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* -- Visuals -- */
+.banknote-visual {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.banknote-img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease;
+}
+
+.banknote-card:hover .banknote-img {
+    transform: scale(1.02) rotate(-1deg);
+}
+
+.explore-action {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6c757d;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.banknote-card:hover .explore-action {
+    color: #0d6efd; /* Highlight color on hover */
+}
+
+/* -- Details and Carousel -- */
+.banknote-details {
+    flex: 1 1 auto;
+    min-width: 0; /* Prevents flexbox overflow issues */
+}
+
+.denomination-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    color: #212529;
+    letter-spacing: -0.03em;
+}
+
+/* -- Carousel -- */
+.carousel-container {
+    position: relative;
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+.carousel {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+    .carousel::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .carousel::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .carousel::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+        .carousel::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+.carousel-item-modern {
+    flex: 0 0 auto;
+    width: 260px;
+    height: 280px;
+    scroll-snap-align: start;
+}
+
+    .carousel-item-modern ::deep .place-card-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+/* -- Responsive Design -- */
+@media (min-width: 992px) {
+    .card-content-wrapper {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .banknote-visual {
+        flex: 0 0 35%;
+        border-right: 1px solid rgba(0,0,0,0.06);
+        padding-right: 2.5rem;
+    }
+}

@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
+    <Content Remove="Components\Articles\BanknoteModal.razor" />
     <Content Remove="wwwroot\images\rub-10-1997-obverse.jpg" />
     <Content Remove="wwwroot\images\rub-10-1997-reverse.jpg" />
     <Content Remove="wwwroot\images\rub-100-1997-obverse.jpg" />
@@ -26,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Components\Articles\BanknoteModal.razor" />
     <None Include="wwwroot\images\banknotes\rub-10-1997-obverse.jpg" />
     <None Include="wwwroot\images\banknotes\rub-10-1997-reverse.jpg" />
     <None Include="wwwroot\images\banknotes\rub-100-1997-obverse.jpg" />
