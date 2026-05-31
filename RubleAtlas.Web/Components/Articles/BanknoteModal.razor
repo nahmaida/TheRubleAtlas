@@ -16,7 +16,8 @@
 
             <div class="modal-body-scrollable">
                 <div class="article-hero-3d border-bottom">
-                    <RubleAtlas.Web.Components._3DNoteView._3DNoteView @key="Banknote.Name" Banknote="Banknote" />
+                    <RubleAtlas.Web.Components._3DNoteView._3DNoteView @key="Banknote.Name"
+                                                                       Banknote="Banknote" />
                 </div>
 
                 <article class="article-content">
@@ -27,20 +28,20 @@
                     else
                     {
                         <p class="lead fw-normal text-muted">
-                            The @L[Banknote.Name] is a significant piece of currency, featuring detailed historical and geographical landmarks that represent the cultural heritage of the region.
+                            @string.Format(L["BanknoteDescriptionFormat"].Value, L[Banknote.Name])
                         </p>
                         
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim.
+                            @L["LoremIpsumShort"]
                         </p>
 
-                        <h4 class="mt-4 mb-3 fw-bold">History & Design</h4>
+                        <h4 class="mt-4 mb-3 fw-bold">@L["HistoryAndDesign"]</h4>
                         <p>
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            @L["ExcepteurSint"]
                         </p>
 
                         <blockquote class="blockquote-modern my-4">
-                            "Banknotes are the business cards of a nation."
+                            @L["BanknotesQuote"]
                         </blockquote>
                     }
                 </article>

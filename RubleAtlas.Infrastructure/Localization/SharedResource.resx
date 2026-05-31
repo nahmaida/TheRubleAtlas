@@ -232,10 +232,10 @@
     <value>Саратов</value>
   </data>
   <data name="Landmark.RUB10.1997.Obverse.KrasnoyarskChapel" xml:space="preserve">
-    <value>Часовня в Красноярске</value>
+    <value>Часовня Параскевы Пятницы</value>
   </data>
   <data name="Landmark.RUB10.1997.Obverse.YeniseyBridge" xml:space="preserve">
-    <value>Мост через Енисей</value>
+    <value>Коммунальный мост</value>
   </data>
   <data name="Landmark.RUB10.1997.Reverse.KrasnoyarskHydroDam" xml:space="preserve">
     <value>Красноярская ГЭС</value>
@@ -256,7 +256,7 @@
     <value>Памятник Ярославу Мудрому</value>
   </data>
   <data name="Landmark.RUB1000.1997.Obverse.YaroslavlChapel" xml:space="preserve">
-    <value>Часовня в Ярославле</value>
+    <value>Часовня Казанской Богоматери</value>
   </data>
   <data name="Landmark.RUB1000.1997.Obverse.YaroslavlKremlin" xml:space="preserve">
     <value>Ярославский кремль</value>
@@ -328,7 +328,7 @@
     <value>Мост через Амур</value>
   </data>
   <data name="Landmark.RUB5000.2023.Obverse.CityCenter" xml:space="preserve">
-    <value>Центр города</value>
+    <value>Центр Екатеринбурга</value>
   </data>
   <data name="Landmark.RUB5000.2023.Obverse.EuropeAsiaMonument" xml:space="preserve">
     <value>Стела «Европа–Азия»</value>
@@ -340,7 +340,7 @@
     <value>66-я параллель</value>
   </data>
   <data name="Landmark.RUB5000.2023.Reverse.UralMonument" xml:space="preserve">
-    <value>Уральский монумент</value>
+    <value>Монумент «Сказ об Урале»</value>
   </data>
   <data name="Security.Fibres.ColouredRedBlueAndGrey" xml:space="preserve">
     <value>Волокна: цветные (красные, синие и серые)</value>
@@ -443,5 +443,56 @@
   </data>
   <data name="City.Tula" xml:space="preserve">
     <value>Тула</value>
+  </data>
+  <data name="ExploreBanknotes" xml:space="preserve">
+    <value>Обзор банкнот</value>
+  </data>
+  <data name="ExploreBanknotesSubtitle" xml:space="preserve">
+    <value>Узнайте историю и достопримечательности, скрытые на денежных купюрах.</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Загрузка...</value>
+  </data>
+  <data name="RubleBanknoteAlt" xml:space="preserve">
+    <value>Банкнота {0} рублей</value>
+  </data>
+  <data name="ViewDetails" xml:space="preserve">
+    <value>Подробнее</value>
+  </data>
+  <data name="SeriesFormat" xml:space="preserve">
+    <value>Серия {0} года</value>
+  </data>
+  <data name="FeaturedLandmarks" xml:space="preserve">
+    <value>Популярные достопримечательности</value>
+  </data>
+  <data name="BanknoteDescriptionFormat" xml:space="preserve">
+    <value>{0} является важным денежным знаком, содержащим детальные исторические и географические достопримечательности, отражающие культурное наследие региона.</value>
+  </data>
+  <data name="LoremIpsumShort" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim.</value>
+  </data>
+  <data name="HistoryAndDesign" xml:space="preserve">
+    <value>История и дизайн</value>
+  </data>
+  <data name="ExcepteurSint" xml:space="preserve">
+    <value>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</value>
+  </data>
+  <data name="BanknotesQuote" xml:space="preserve">
+    <value>«Банкноты — это визитные карточки государства.»</value>
+  </data>
+  <data name="PlaceDetails" xml:space="preserve">
+    <value>Детали места</value>
+  </data>
+  <data name="PlaceDescriptionFormat" xml:space="preserve">
+    <value>{0} — это известная достопримечательность, признанная за свою историческую, архитектурную и культурную значимость.</value>
+  </data>
+  <data name="LoremIpsumLong" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</value>
+  </data>
+  <data name="Significance" xml:space="preserve">
+    <value>Значимость</value>
+  </data>
+  <data name="DuisAute" xml:space="preserve">
+    <value>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</value>
   </data>
 </root>

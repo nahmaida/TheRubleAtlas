@@ -1,5 +1,13 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using System.Globalization
+@{
+    // This captures the culture from the initial HTTP request
+    var initialCulture = CultureInfo.CurrentCulture;
+    CultureInfo.DefaultThreadCurrentCulture = initialCulture;
+    CultureInfo.DefaultThreadCurrentUICulture = initialCulture;
+}
+
+<!DOCTYPE html>
+<html lang="@initialCulture.Name">
 
 <head>
     <meta charset="utf-8" />

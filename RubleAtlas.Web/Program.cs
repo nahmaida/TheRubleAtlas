@@ -44,6 +44,9 @@ namespace RubleAtlas.Web
                 .AddSupportedCultures(supportedCultures)
                 .AddSupportedUICultures(supportedCultures);
 
+            // ADD THIS: Ignore browser headers/cookies for a moment to test
+            localizationOptions.RequestCultureProviders.Clear();
+
             Console.WriteLine(supportedCultures[0]);
 
             app.UseRequestLocalization(localizationOptions);
