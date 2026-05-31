@@ -2,89 +2,58 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    /* Reverted to strict viewport height to lock the page from scrolling */
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f8f9fa;
 }
 
 main {
-    flex: 1;
-}
-
-.source-text {
-    margin-right: auto;
-    color: darkslategray;
-}
-
-.top-row {
-    height: 4rem;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 10;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-image: linear-gradient(135deg, #007071 0%, #63BD96 70%);
-    padding: 0 1.5rem;
+    flex-direction: column;
+    flex: 1;
+    /* min-height: 0 is critical here to stop the map from forcing an overflow */
+    min-height: 0;
+    width: 100%;
 }
 
+.content {
+    flex: 1;
+    width: 100%;
+    /* Also critical for nested flex containment */
+    min-height: 0;
+    /* Removed max-width and margin: 0 auto so the map takes the full screen */
+}
+
+/* Footer location strictly pinned */
 .bottom-row {
     background-color: #f7f7f7;
     border-top: 1px solid #d6d5d5;
-    justify-content: flex-end;
     height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1.5rem;
+    /* flex-shrink: 0 ensures the footer never gets squished */
+    flex-shrink: 0;
+    z-index: 10;
 }
 
-    .bottom-row ::deep a, .bottom-row ::deep .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
+.source-text {
+    color: #5f6368;
+    font-size: 0.875rem;
+}
 
-    .bottom-row ::deep a:hover, .bottom-row ::deep .btn-link:hover {
+.bottom-row ::deep a {
+    color: #007071; /* Accent color for links */
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+    .bottom-row ::deep a:hover {
         text-decoration: underline;
     }
-
-    .bottom-row ::deep a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-@media (max-width: 640.98px) {
-    .bottom-row {
-        justify-content: space-between;
-    }
-
-    .bottom-row ::deep a, .bottom-row ::deep .btn-link {
-        margin-left: 0;
-    }
-}
-
-@media (min-width: 641px) {
-    .top-row {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-    }
-
-    .bottom-row {
-        position: sticky;
-        bottom: 0;
-        z-index: 1;
-    }
-
-    .bottom-row.auth ::deep a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
-
-    .bottom-row {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
-    }
-}
 
 #blazor-error-ui {
     color-scheme: light only;
@@ -106,21 +75,3 @@ main {
         right: 0.75rem;
         top: 0.5rem;
     }
-
-.page {
-    height: 100vh;
-    overflow: hidden;
-}
-
-    .page > main {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        min-height: 0;
-    }
-
-        .page > main > .content {
-            flex: 1;
-            min-height: 0;
-            overflow: hidden;
-        }

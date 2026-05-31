@@ -1,18 +1,25 @@
 ﻿@using Microsoft.Extensions.Localization
 @inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
 
-<nav class="top-nav navbar navbar-dark">
-    <a class="navbar-brand ps-3" href="">@L["Project_Title"]</a>
+<div class="floating-nav-container">
+    <div class="island brand-island">
+        <div class="logo-wrapper">
+            <img src="images/logo_circle.png" alt="Ruble Atlas Logo" />
+        </div>
+        <a class="navbar-brand" href="">@L["Project_Title"]</a>
+    </div>
 
-    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-        <span class="bi bi-map-nav-menu" aria-hidden="true"></span> @L["Map_Page_Title"]
-    </NavLink>
+    <nav class="island links-island">
+        <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+            <span class="bi bi-map-nav-menu" aria-hidden="true"></span> @L["Map_Page_Title"]
+        </NavLink>
 
-    <NavLink class="nav-link" href="banknotes">
-        <span class="bi bi-banknotes-nav-menu" aria-hidden="true"></span> @L["Banknotes_Page_Title"]
-    </NavLink>
+        <NavLink class="nav-link" href="banknotes">
+            <span class="bi bi-banknotes-nav-menu" aria-hidden="true"></span> @L["Banknotes_Page_Title"]
+        </NavLink>
 
-    <NavLink class="nav-link" href="coins">
-        <span class="bi bi-coins-nav-menu" aria-hidden="true"></span> @L["Coins_Page_Title"]
-    </NavLink>
-</nav>
+        <NavLink class="nav-link" href="coins">
+            <span class="bi bi-coins-nav-menu" aria-hidden="true"></span> @L["Coins_Page_Title"]
+        </NavLink>
+    </nav>
+</div>

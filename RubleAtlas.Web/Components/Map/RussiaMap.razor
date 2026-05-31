@@ -101,26 +101,25 @@
         int value = note.Denomination;
         int year = note.Year;
 
-        // Style all banknote points of this type
         args.sender.Geometric.Points.AppearanceOnType(p => p.type == type).pattern =
             new RealTimeMap.PointSymbol
-            {
-                fillColor = fillColor,
-                color = "#1f1f1f",     // outline
-                radius = _symbolRadiusPx,
-                weight = 2,
-                fillOpacity = 0.9,
-                opacity = 1
-            };
+                {
+                    fillColor = fillColor,
+                    color = "#171e18",
+                    radius = _symbolRadiusPx + 1,
+                    weight = 2,   
+                    fillOpacity = 0.95,    
+                    opacity = 1
+                };
 
+        // Format tooltips into a clean typographic structure
         args.sender.Geometric.Points.AppearanceOnType(p => p.type == type).pattern =
-        new RealTimeMap.PointTooltip
-        {
-            content = $"<b>{value}₽</b> {year}",
-            permanent = false,
-            opacity = 0.9
-        };
-
+            new RealTimeMap.PointTooltip
+                {
+                    content = $"<div style='font-family: inherit;'><b>{value}₽</b> <span style='opacity: 0.75; font-size: 0.8rem; font-weight: 400;'>({year})</span></div>",
+                    permanent = false,
+                    opacity = 1
+                };
         Console.WriteLine("Markers colored");
     }
 

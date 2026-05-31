@@ -4,3 +4,148 @@
     min-height: 0;
     overflow: hidden;
 }
+
+/* Push the top tier slightly further down to compensate for the taller navigation bars */
+::deep .leaflet-top {
+    top: 7rem !important;
+    transition: top 0.2s ease-in-out;
+}
+
+::deep .leaflet-left {
+    left: 1.5rem !important;
+}
+
+::deep .leaflet-right {
+    right: 1.5rem !important;
+}
+
+/* ----------------------------------------------------------- */
+/* Glassmorphic Utility Blocks (Zoom Containers & Layer Boxes) */
+/* ----------------------------------------------------------- */
+::deep .leaflet-bar,
+::deep .leaflet-control-layers {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    border-radius: 14px !important; /* Smooth Apple-style rounded panels */
+    overflow: hidden;
+    margin-bottom: 0.75rem !important;
+}
+
+    /* ----------------------------------------------------------- */
+    /* Custom Sizing and Colors for Individual Action Buttons      */
+    /* ----------------------------------------------------------- */
+    ::deep .leaflet-bar a {
+        background: transparent !important;
+        color: #5f6368 !important; /* Soft slate gray */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+        width: 36px !important; /* Slightly enlarged target area */
+        height: 36px !important;
+        line-height: 36px !important;
+        font-size: 1.2rem !important;
+        font-weight: 400 !important;
+        transition: all 0.2s ease-in-out;
+    }
+
+        /* Clean up double borders on bottom elements */
+        ::deep .leaflet-bar a:last-child {
+            border-bottom: none !important;
+        }
+
+        /* Interaction Hover States mapped to your application theme */
+        ::deep .leaflet-bar a:hover {
+            background-color: rgba(99, 189, 150, 0.12) !important;
+            color: #007071 !important;
+        }
+
+        /* Disabled/Limit states (e.g. max zoom reached) */
+        ::deep .leaflet-bar a.leaflet-disabled {
+            background-color: rgba(0, 0, 0, 0.02) !important;
+            color: #c6c6c6 !important;
+            opacity: 0.5;
+        }
+
+/* ----------------------------------------------------------- */
+/* Expanded Filter Menu Panel Beautification                    */
+/* ----------------------------------------------------------- */
+/* Scale up the native filter button icon wrapper */
+::deep .leaflet-control-layers-toggle {
+    width: 44px !important; /* Up from 36px for an accessible hit target */
+    height: 44px !important; /* Up from 36px */
+    background-size: 22px 22px !important; /* Scaled up icon vector */
+    transition: transform 0.2s ease-in-out;
+}
+
+    /* Add a subtle micro-interaction state to the enlarged filter switch */
+    ::deep .leaflet-control-layers-toggle:hover {
+        transform: scale(1.04);
+    }
+
+/* Balance out the container box boundaries when expanded */
+::deep .leaflet-control-layers-expanded {
+    padding: 1rem 1.25rem !important;
+    border-radius: 16px !important;
+    color: #202124 !important;
+    font-family: inherit !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+}
+
+/* Style the native checkboxes/radio buttons inside the filter drawer */
+::deep .leaflet-control-layers-selector {
+    margin-right: 0.5rem !important;
+    accent-color: #007071; /* Maps controls to the app theme color */
+    transform: scale(1.05);
+}
+
+
+/* ----------------------------------------------------------- */
+/* Mobile Responsive Cleanups                                  */
+/* ----------------------------------------------------------- */
+@media (max-width: 768px) {
+    ::deep .leaflet-top {
+        top: auto !important;
+        bottom: 3.75rem !important;
+    }
+
+    ::deep .leaflet-left {
+        left: 1rem !important;
+    }
+
+    ::deep .leaflet-right {
+        right: 1rem !important;
+    }
+}
+
+/* ----------------------------------------------------------- */
+/* Premium Hover Tooltip Aesthetics                            */
+/* ----------------------------------------------------------- */
+::deep .leaflet-tooltip {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid #007071 !important;
+    border-radius: 12px !important;
+    color: #171e18 !important;
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.16) !important;
+}
+
+/* Align directional arrow anchors to match the dark theme background */
+::deep .leaflet-tooltip-top:before {
+    border-top-color: #007071 !important;
+}
+
+::deep .leaflet-tooltip-bottom:before {
+    border-bottom-color: #007071 !important;
+}
+
+::deep .leaflet-tooltip-left:before {
+    border-left-color: #007071 !important;
+}
+
+::deep .leaflet-tooltip-right:before {
+    border-right-color: #007071 !important;
+}

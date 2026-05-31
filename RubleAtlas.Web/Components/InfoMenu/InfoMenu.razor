@@ -1,34 +1,36 @@
 ﻿@using RubleAtlas.Domain
 @using Microsoft.Extensions.Localization
+@using RubleAtlas.Web.Components.Articles
 @inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
 
-<aside class="position-fixed bg-white shadow rounded-4 p-3 d-flex flex-column gap-3 infomenu @( Open ? "" : "d-none")"
+<aside class="position-fixed d-flex flex-column gap-3 infomenu @( Open ? "" : "d-none")"
        role="dialog"
        aria-labelledby="popupTitle">
+    
     <button type="button" class="btn-close closeinfomenu" aria-label="Close" @onclick="ToggleOpen"></button>
-    <h2 id="popupTitle" class="h5 m-0">@L[@Banknote.Name]</h2>
+    
+    <h2 id="popupTitle" class="h5 m-0 pe-5 font-weight-600" style="color: #202124; letter-spacing: -0.01em;">
+        @L[@Banknote.Name]
+    </h2>
 
-    <div class="border note3d rounded-3 bg-light">
+    <div class="note3d bg-light">
         <RubleAtlas.Web.Components._3DNoteView._3DNoteView @key="Place.LandmarkKey" Banknote="Banknote"></RubleAtlas.Web.Components._3DNoteView._3DNoteView>
     </div>
 
-    <NavLink class="btn btn-dark w-100" href="banknotes">
+    <div class="btn w-100" @onclick="() => NavigateToDetails(Banknote)" style="background-color: #3e7758; color: white; border-radius: 12px; font-weight: 500; transition: background 0.2s;">
         @L["Read_More"]
-    </NavLink>
+    </div>
 
-    <hr class="my-1">
-
-    <h3 class="h6 m-0"></h3>
+    <hr class="my-1" style="border-top: 1px solid rgba(0,0,0,0.06);">
 
     <div class="cardBox">
         <PlaceCard Place="Place" />
     </div>
-
-    <p class="small text-secondary m-0">
-        Lorem ipsum something something
-    </p>
 </aside>
 
+<BanknoteModal @bind-IsVisible="isArticleModalOpen"
+               Banknote="@Banknote">
+</BanknoteModal>
 
 
 @code {
@@ -40,10 +42,17 @@
     public EventCallback OnClose { get; set; }
     [Parameter]
     public bool Open { get; set; }
+    private bool isArticleModalOpen = false;
 
     private void ToggleOpen()
     {
         Open = !Open;
         if (!Open) OnClose.InvokeAsync();
     }
+
+    private void NavigateToDetails(Banknote note)
+    {
+        isArticleModalOpen = true;
+    }
+}
 }
