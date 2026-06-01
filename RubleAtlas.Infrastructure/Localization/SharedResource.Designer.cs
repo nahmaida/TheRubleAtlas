@@ -862,6 +862,33 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 100₽ 2014.
+        /// </summary>
+        public static string rub_100_2014_alt {
+            get {
+                return ResourceManager.GetString("rub-100-2014-alt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100₽ 2015.
+        /// </summary>
+        public static string rub_100_2015_alt {
+            get {
+                return ResourceManager.GetString("rub-100-2015-alt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100₽ 2018.
+        /// </summary>
+        public static string rub_100_2018_alt {
+            get {
+                return ResourceManager.GetString("rub-100-2018-alt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 100₽ 2022.
         /// </summary>
         public static string rub_100_2022 {
@@ -871,11 +898,29 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1000₽ 1995.
+        /// </summary>
+        public static string rub_1000_1995_alt {
+            get {
+                return ResourceManager.GetString("rub-1000-1995-alt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1000₽ 1997.
         /// </summary>
         public static string rub_1000_1997 {
             get {
                 return ResourceManager.GetString("rub-1000-1997", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1000₽ 2023.
+        /// </summary>
+        public static string rub_1000_2023_alt {
+            get {
+                return ResourceManager.GetString("rub-1000-2023-alt", resourceCulture);
             }
         }
         

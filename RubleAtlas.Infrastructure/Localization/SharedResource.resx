@@ -510,4 +510,19 @@
   <data name="WorldCup2018" xml:space="preserve">
     <value>Чемпионат мира по футболу 2018</value>
   </data>
+  <data name="rub-1000-1995-alt" xml:space="preserve">
+    <value>1000₽ 1995</value>
+  </data>
+  <data name="rub-1000-2023-alt" xml:space="preserve">
+    <value>1000₽ 2023</value>
+  </data>
+  <data name="rub-100-2014-alt" xml:space="preserve">
+    <value>100₽ 2014</value>
+  </data>
+  <data name="rub-100-2015-alt" xml:space="preserve">
+    <value>100₽ 2015</value>
+  </data>
+  <data name="rub-100-2018-alt" xml:space="preserve">
+    <value>100₽ 2018</value>
+  </data>
 </root>
