@@ -79,11 +79,29 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} является важным денежным знаком, содержащим детальные исторические и географические достопримечательности, отражающие культурное наследие региона..
+        /// </summary>
+        public static string BanknoteDescriptionFormat {
+            get {
+                return ResourceManager.GetString("BanknoteDescriptionFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Банкноты.
         /// </summary>
         public static string Banknotes_Page_Title {
             get {
                 return ResourceManager.GetString("Banknotes_Page_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to «Банкноты — это визитные карточки государства.».
+        /// </summary>
+        public static string BanknotesQuote {
+            get {
+                return ResourceManager.GetString("BanknotesQuote", resourceCulture);
             }
         }
         
@@ -277,11 +295,65 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..
+        /// </summary>
+        public static string DuisAute {
+            get {
+                return ResourceManager.GetString("DuisAute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..
+        /// </summary>
+        public static string ExcepteurSint {
+            get {
+                return ResourceManager.GetString("ExcepteurSint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обзор банкнот.
+        /// </summary>
+        public static string ExploreBanknotes {
+            get {
+                return ResourceManager.GetString("ExploreBanknotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Узнайте историю и достопримечательности, скрытые на денежных купюрах..
+        /// </summary>
+        public static string ExploreBanknotesSubtitle {
+            get {
+                return ResourceManager.GetString("ExploreBanknotesSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Популярные достопримечательности.
+        /// </summary>
+        public static string FeaturedLandmarks {
+            get {
+                return ResourceManager.GetString("FeaturedLandmarks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Перейти.
         /// </summary>
         public static string GoToPlace {
             get {
                 return ResourceManager.GetString("GoToPlace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to История и дизайн.
+        /// </summary>
+        public static string HistoryAndDesign {
+            get {
+                return ResourceManager.GetString("HistoryAndDesign", resourceCulture);
             }
         }
         
@@ -592,7 +664,7 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Набережная Хабаровска.
+        ///   Looks up a localized string similar to Набережная Адмирала Невельского.
         /// </summary>
         public static string Landmark_RUB5000_1997_Obverse_KhabarovskEmbankment {
             get {
@@ -673,11 +745,56 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Загрузка....
+        /// </summary>
+        public static string Loading {
+            get {
+                return ResourceManager.GetString("Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..
+        /// </summary>
+        public static string LoremIpsumLong {
+            get {
+                return ResourceManager.GetString("LoremIpsumLong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim..
+        /// </summary>
+        public static string LoremIpsumShort {
+            get {
+                return ResourceManager.GetString("LoremIpsumShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Карта.
         /// </summary>
         public static string Map_Page_Title {
             get {
                 return ResourceManager.GetString("Map_Page_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} — это известная достопримечательность, признанная за свою историческую, архитектурную и культурную значимость..
+        /// </summary>
+        public static string PlaceDescriptionFormat {
+            get {
+                return ResourceManager.GetString("PlaceDescriptionFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Детали места.
+        /// </summary>
+        public static string PlaceDetails {
+            get {
+                return ResourceManager.GetString("PlaceDetails", resourceCulture);
             }
         }
         
@@ -804,6 +921,15 @@ namespace RubleAtlas.Infrastructure.Localization {
         public static string rub_5000_2023 {
             get {
                 return ResourceManager.GetString("rub-5000-2023", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Банкнота {0} рублей.
+        /// </summary>
+        public static string RubleBanknoteAlt {
+            get {
+                return ResourceManager.GetString("RubleBanknoteAlt", resourceCulture);
             }
         }
         
@@ -935,6 +1061,24 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Серия {0} года.
+        /// </summary>
+        public static string SeriesFormat {
+            get {
+                return ResourceManager.GetString("SeriesFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Значимость.
+        /// </summary>
+        public static string Significance {
+            get {
+                return ResourceManager.GetString("Significance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Факты: 10 рублей (1997).
         /// </summary>
         public static string Trivia_RUB10_1997 {
@@ -1039,6 +1183,15 @@ namespace RubleAtlas.Infrastructure.Localization {
         public static string Trivia_RUB5000_2023 {
             get {
                 return ResourceManager.GetString("Trivia.RUB5000.2023", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подробнее.
+        /// </summary>
+        public static string ViewDetails {
+            get {
+                return ResourceManager.GetString("ViewDetails", resourceCulture);
             }
         }
     }
