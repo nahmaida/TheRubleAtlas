@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="Articles\Banknotes\en\" />
-    <Folder Include="Articles\Banknotes\ru\" />
     <Folder Include="Articles\Places\en\" />
     <Folder Include="Articles\Places\ru\" />
   </ItemGroup>
