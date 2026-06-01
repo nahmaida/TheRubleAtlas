@@ -1,64 +1,61 @@
 ﻿@page "/coins"
-@attribute [StreamRendering]
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
 
-<PageTitle>Coins</PageTitle>
+<PageTitle>@L["Coins_Page_Title_Long"]</PageTitle>
 
-<h1>Coins</h1>
+<div class="coins-container">
+    <div class="coins-inner">
+        <!-- Hero Header -->
+        <header class="coins-hero">
+            <h1>@L["Coins_Hero_Title"]</h1>
+            <p class="subtitle">@L["Coins_Hero_Subtitle"]</p>
+        </header>
 
-<p>This component demonstrates showing data.</p>
+        <!-- Core Denominations Grid -->
+        <section class="section-block">
+            <h2 class="section-title">@L["Circulating_Denominations"]</h2>
+            <div class="denominations-grid">
+                <div class="coin-card c-1">
+                    <div class="coin-disc">1₽</div>
+                    <h3>@L["Denom_1_Ruble"]</h3>
+                    <p>@L["Material_Nickel_Steel"]</p>
+                </div>
+                <div class="coin-card c-2">
+                    <div class="coin-disc">2₽</div>
+                    <h3>@L["Denom_2_Rubles"]</h3>
+                    <p>@L["Material_Nickel_Steel"]</p>
+                </div>
+                <div class="coin-card c-5">
+                    <div class="coin-disc">5₽</div>
+                    <h3>@L["Denom_5_Rubles"]</h3>
+                    <p>@L["Material_Nickel_Steel"]</p>
+                </div>
+                <div class="coin-card c-10">
+                    <div class="coin-disc">10₽</div>
+                    <h3>@L["Denom_10_Rubles"]</h3>
+                    <p>@L["Material_Brass_Steel"]</p>
+                </div>
+            </div>
+        </section>
 
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th aria-label="Temperature in Celsius">Temp. (C)</th>
-                <th aria-label="Temperature in Fahrenheit">Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+        <!-- Anatomy Feature Split -->
+        <section class="anatomy-row">
+            <div class="feature-card">
+                <div class="badge">@L["Badge_Design_Feature"]</div>
+                <h2>@L["Feature_Mintmarks_Title"]</h2>
+                <p>@L["Feature_Mintmarks_Desc"]</p>
+                <ul class="feature-list">
+                    <li><strong>MMD</strong> — @L["Mint_Moscow"]</li>
+                    <li><strong>SPMD</strong> — @L["Mint_StPetersburg"]</li>
+                </ul>
+            </div>
 
-@code {
-    private WeatherForecast[]? forecasts;
-
-    protected override async Task OnInitializedAsync()
-    {
-        // Simulate asynchronous loading to demonstrate streaming rendering
-        await Task.Delay(500);
-
-        var startDate = DateOnly.FromDateTime(DateTime.Now);
-        var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
-        forecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = startDate.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = summaries[Random.Shared.Next(summaries.Length)]
-        }).ToArray();
-    }
-
-    private class WeatherForecast
-    {
-        public DateOnly Date { get; set; }
-        public int TemperatureC { get; set; }
-        public string? Summary { get; set; }
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-    }
-}
+            <div class="feature-card highlighted">
+                <div class="badge accent">@L["Badge_Historical_Shift"]</div>
+                <h2>@L["Feature_Eagle_Title"]</h2>
+                <p>@L["Feature_Eagle_Desc"]</p>
+            </div>
+        </section>
+    </div>
+</div>

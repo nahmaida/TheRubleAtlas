@@ -525,4 +525,58 @@
   <data name="rub-100-2018-alt" xml:space="preserve">
     <value>100₽ 2018</value>
   </data>
+  <data name="Coins_Page_Title_Long" xml:space="preserve">
+  <value>Coins of the Russian Federation</value>
+</data>
+<data name="Coins_Hero_Title" xml:space="preserve">
+  <value>Coins of the Ruble</value>
+</data>
+<data name="Coins_Hero_Subtitle" xml:space="preserve">
+  <value>While the Atlas charts the vast geography illustrated on Russia's banknotes, the coinage forms the daily foundation of the currency system. Discover the universal design language shared by every modern coin.</value>
+</data>
+<data name="Circulating_Denominations" xml:space="preserve">
+  <value>Circulating Denominations</value>
+</data>
+<data name="Denom_1_Ruble" xml:space="preserve">
+  <value>1 Ruble</value>
+</data>
+<data name="Denom_2_Rubles" xml:space="preserve">
+  <value>2 Rubles</value>
+</data>
+<data name="Denom_5_Rubles" xml:space="preserve">
+  <value>5 Rubles</value>
+</data>
+<data name="Denom_10_Rubles" xml:space="preserve">
+  <value>10 Rubles</value>
+</data>
+<data name="Material_Nickel_Steel" xml:space="preserve">
+  <value>Nickel-plated steel</value>
+</data>
+<data name="Material_Brass_Steel" xml:space="preserve">
+  <value>Brass-plated steel</value>
+</data>
+<data name="Badge_Design_Feature" xml:space="preserve">
+  <value>Design Feature</value>
+</data>
+<data name="Badge_Historical_Shift" xml:space="preserve">
+  <value>Historical Shift</value>
+</data>
+<data name="Feature_Mintmarks_Title" xml:space="preserve">
+  <value>The Mintmarks</value>
+</data>
+<data name="Feature_Mintmarks_Desc" xml:space="preserve">
+  <value>Every circulating coin features a microscopic monogram stamp under the right claw of the eagle (obverse) indicating where it was struck:</value>
+</data>
+<data name="Mint_Moscow" xml:space="preserve">
+  <value>Moscow Mint (ММД)</value>
+</data>
+<data name="Mint_StPetersburg" xml:space="preserve">
+  <value>St. Petersburg Mint (СПМД)</value>
+</data>
+<data name="Feature_Eagle_Title" xml:space="preserve">
+  <value>The Double-Headed Eagle</value>
+</data>
+<data name="Feature_Eagle_Desc" xml:space="preserve">
+  <value>Coins minted between 1992 and 2015 utilized the emblem of the Bank of Russia (an eagle without a crown or scepter). Starting in 2016, all new coins were upgraded to depict the official State Coat of Arms of the Russian Federation.</value>
+</data>
 </root>

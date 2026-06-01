@@ -2,7 +2,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    /* Reverted to strict viewport height to lock the page from scrolling */
     height: 100vh;
     overflow: hidden;
     background-color: #f8f9fa;
@@ -20,12 +19,9 @@ main {
 .content {
     flex: 1;
     width: 100%;
-    /* Also critical for nested flex containment */
     min-height: 0;
-    /* Removed max-width and margin: 0 auto so the map takes the full screen */
 }
 
-/* Footer location strictly pinned */
 .bottom-row {
     background-color: #f7f7f7;
     border-top: 1px solid #d6d5d5;
@@ -34,7 +30,6 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 0 1.5rem;
-    /* flex-shrink: 0 ensures the footer never gets squished */
     flex-shrink: 0;
     z-index: 10;
 }
