@@ -1,6 +1,9 @@
 ﻿@using RubleAtlas.Domain
 @using Microsoft.Extensions.Localization
+@using RubleAtlas.Infrastructure.Storage.Markdown
 @using RubleAtlas.Web.Components.Articles
+@using Markdig
+@inject ArticleProvider ArticleService
 @inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
 
 <aside class="position-fixed d-flex flex-column gap-3 infomenu @( Open ? "" : "d-none")"
@@ -17,7 +20,7 @@
         <RubleAtlas.Web.Components._3DNoteView._3DNoteView @key="Place.LandmarkKey" Banknote="Banknote"></RubleAtlas.Web.Components._3DNoteView._3DNoteView>
     </div>
 
-    <div class="btn w-100" @onclick="() => NavigateToDetails(Banknote)" style="background-color: #3e7758; color: white; border-radius: 12px; font-weight: 500; transition: background 0.2s;">
+    <div class="btn w-100" @onclick="() => OpenBanknote(Banknote)" style="background-color: #3e7758; color: white; border-radius: 12px; font-weight: 500; transition: background 0.2s;">
         @L["Read_More"]
     </div>
 
@@ -28,8 +31,10 @@
     </div>
 </aside>
 
-<BanknoteModal @bind-IsVisible="isArticleModalOpen"
-               Banknote="@Banknote">
+<BanknoteModal @bind-IsVisible="isNoteOpen" Banknote="Banknote">
+    <ChildContent>
+        @((MarkupString)renderedHtml)
+    </ChildContent>
 </BanknoteModal>
 
 
@@ -42,7 +47,8 @@
     public EventCallback OnClose { get; set; }
     [Parameter]
     public bool Open { get; set; }
-    private bool isArticleModalOpen = false;
+    private bool isNoteOpen = false;
+    private string renderedHtml = "";
 
     private void ToggleOpen()
     {
@@ -50,9 +56,13 @@
         if (!Open) OnClose.InvokeAsync();
     }
 
-    private void NavigateToDetails(Banknote note)
+    private async Task OpenBanknote(Banknote note)
     {
-        isArticleModalOpen = true;
+        var culture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+        // Uses the ID from data.json (e.g., "Landmark.RUB5.1997.Obverse.SophiaCathedral")
+        var markdown = await ArticleService.GetArticleAsync("Banknotes", note.Name, culture);
+        renderedHtml = Markdig.Markdown.ToHtml(markdown);
+        isNoteOpen = true;
     }
 }
 }

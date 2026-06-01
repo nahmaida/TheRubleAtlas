@@ -2,9 +2,12 @@
 @rendermode InteractiveServer
 @using RubleAtlas.Domain
 @using RubleAtlas.Infrastructure.Storage.JSON
+@using RubleAtlas.Infrastructure.Storage.Markdown
 @using RubleAtlas.Web.Components.Articles
 @using RubleAtlas.Web.Components.InfoMenu
 @using Microsoft.Extensions.Localization
+@using Markdig
+@inject ArticleProvider ArticleService
 @inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
 @inject JSONStorage Storage
 @inject NavigationManager NavManager
@@ -34,7 +37,7 @@
                     <div class="col-12 col-xl-10">
                         <div class="banknote-card"
                              style="background: linear-gradient(-135deg, #ffffff 40%, @note.Color 140%);"
-                             @onclick="() => NavigateToDetails(note)">
+                             @onclick="() => OpenBanknote(note)">
                 
                             <div class="card-content-wrapper">
                                 <div class="banknote-visual">
@@ -94,23 +97,30 @@
     </div>
 </div>
 
-<BanknoteModal @bind-IsVisible="isArticleModalOpen"
-               Banknote="@activeModalBanknote">
+<BanknoteModal @bind-IsVisible="isNoteOpen" Banknote="selectedNote">
+    <ChildContent>
+        @((MarkupString)renderedHtml)
+    </ChildContent>
 </BanknoteModal>
 
 @code {
-    private bool isArticleModalOpen = false;
-    private Banknote? activeModalBanknote = null;
+    private bool isNoteOpen = false;
+    private Banknote? selectedNote = null;
     private List<Banknote>? banknotes;
+    private string renderedHtml = "";
 
     protected override void OnInitialized()
     {
         banknotes = Storage.GetBanknotes();
     }
 
-    private void NavigateToDetails(Banknote note)
+    private async Task OpenBanknote(Banknote note)
     {
-        activeModalBanknote = note;
-        isArticleModalOpen = true;
+        selectedNote = note;
+        var culture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+        // Uses the ID from data.json (e.g., "rub-5-1997")
+        var markdown = await ArticleService.GetArticleAsync("Banknotes", note.Name, culture);
+        renderedHtml = Markdig.Markdown.ToHtml(markdown);
+        isNoteOpen = true;
     }
 }

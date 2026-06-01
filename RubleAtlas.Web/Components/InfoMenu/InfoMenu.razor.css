@@ -1,22 +1,12 @@
-﻿/* ----------------------------------------------------------- */
-/* Premium Glassmorphic Side Drawer (Desktop Viewport Grid)    */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* Premium Glassmorphic Side Drawer (Desktop Viewport Grid)    */
-/* ----------------------------------------------------------- */
-.infomenu {
-    /* Precise position placement to clear the 4.5rem nav bar + layout padding */
+﻿.infomenu {
     top: 5.75rem !important;
     right: 1.5rem !important;
     /* Lock structural width boundaries */
     width: 22vw !important;
     min-width: 320px !important;
     max-width: 420px !important;
-    /* Set fluid heights that explicitly sit clear of the 2.5rem footer */
     height: calc(100vh - 9.5rem) !important;
-    /* FIX: Uniform inner breathing room for text, 3D viewport, and place cards */
     padding: 1.5rem !important;
-    /* Visual Presentation: Clean blur layer matching navbar identity */
     background: rgba(255, 255, 255, 0.9) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
@@ -32,7 +22,6 @@
 /* Custom interactive styling for the close anchor */
 .closeinfomenu {
     position: absolute !important;
-    /* Aligns perfectly inline with the new 1.5rem padding container walls */
     right: 1.5rem !important;
     top: 1.5rem !important;
     background-color: rgba(0, 0, 0, 0.04) !important;
@@ -46,7 +35,7 @@
         background-color: rgba(0, 0, 0, 0.08) !important;
     }
 
-/* Enforce fluid heights to expand internal landmark containers cleanly */
+/* Enforce fluid heights to expand internal landmark containers */
 .cardBox {
     flex: 1 1 auto;
     min-height: 280px;
@@ -85,9 +74,8 @@
     border-radius: 10px;
 }
 
-/* ----------------------------------------------------------- */
+
 /* Touch Optimized Bottom Sheet Sheet Configuration (Mobile)   */
-/* ----------------------------------------------------------- */
 @media (max-width: 768px) {
     .infomenu {
         top: auto !important;

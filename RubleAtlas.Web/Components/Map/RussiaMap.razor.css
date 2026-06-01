@@ -5,7 +5,6 @@
     overflow: hidden;
 }
 
-/* Push the top tier slightly further down to compensate for the taller navigation bars */
 ::deep .leaflet-top {
     top: 7rem !important;
     transition: top 0.2s ease-in-out;
@@ -19,9 +18,8 @@
     right: 1.5rem !important;
 }
 
-/* ----------------------------------------------------------- */
-/* Glassmorphic Utility Blocks (Zoom Containers & Layer Boxes) */
-/* ----------------------------------------------------------- */
+
+/* Zoom Containers & Layer Boxes */
 ::deep .leaflet-bar,
 ::deep .leaflet-control-layers {
     background: rgba(255, 255, 255, 0.85) !important;
@@ -34,9 +32,8 @@
     margin-bottom: 0.75rem !important;
 }
 
-    /* ----------------------------------------------------------- */
+    
     /* Custom Sizing and Colors for Individual Action Buttons      */
-    /* ----------------------------------------------------------- */
     ::deep .leaflet-bar a {
         background: transparent !important;
         color: #5f6368 !important; /* Soft slate gray */
@@ -54,7 +51,7 @@
             border-bottom: none !important;
         }
 
-        /* Interaction Hover States mapped to your application theme */
+        /* Interaction Hover States */
         ::deep .leaflet-bar a:hover {
             background-color: rgba(99, 189, 150, 0.12) !important;
             color: #007071 !important;
@@ -67,14 +64,13 @@
             opacity: 0.5;
         }
 
-/* ----------------------------------------------------------- */
-/* Expanded Filter Menu Panel Beautification                    */
-/* ----------------------------------------------------------- */
-/* Scale up the native filter button icon wrapper */
+
+/* Filter Menu Panel */
+
 ::deep .leaflet-control-layers-toggle {
-    width: 44px !important; /* Up from 36px for an accessible hit target */
-    height: 44px !important; /* Up from 36px */
-    background-size: 22px 22px !important; /* Scaled up icon vector */
+    width: 44px !important;
+    height: 44px !important;
+    background-size: 22px 22px !important;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -101,9 +97,9 @@
 }
 
 
-/* ----------------------------------------------------------- */
+
 /* Mobile Responsive Cleanups                                  */
-/* ----------------------------------------------------------- */
+
 @media (max-width: 768px) {
     ::deep .leaflet-top {
         top: auto !important;
@@ -119,9 +115,9 @@
     }
 }
 
-/* ----------------------------------------------------------- */
-/* Premium Hover Tooltip Aesthetics                            */
-/* ----------------------------------------------------------- */
+
+/* Hover Tooltip */
+
 ::deep .leaflet-tooltip {
     background: rgba(255, 255, 255, 0.95) !important;
     border: 2px solid #007071 !important;

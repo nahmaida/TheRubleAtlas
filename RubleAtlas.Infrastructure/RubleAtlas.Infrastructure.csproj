@@ -19,6 +19,19 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Articles\Banknotes\en\" />
+    <Folder Include="Articles\Banknotes\ru\" />
+    <Folder Include="Articles\Places\en\" />
+    <Folder Include="Articles\Places\ru\" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Articles\**\*.md">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

@@ -1,6 +1,9 @@
 @using RubleAtlas.Domain
 @using Microsoft.Extensions.Localization
+@using RubleAtlas.Infrastructure.Storage.Markdown
 @using RubleAtlas.Web.Components.Articles
+@using Markdig
+@inject ArticleProvider ArticleService
 @inject IStringLocalizer<RubleAtlas.Infrastructure.Localization.SharedResource> L
 
 <div class="place-card-wrapper h-100 w-100">
@@ -14,25 +17,32 @@
         </CardBody>
         <CardFooter Class="bg-transparent border-0 pb-3">
             <div class="goButton">
-                <Button Color="ButtonColor.Warning" @onclick="() => NavigateToDetails()" Type="ButtonType.Link">@L["GoToPlace"]</Button>
+                <Button Color="ButtonColor.Warning" @onclick="() => OpenPlace()" Type="ButtonType.Link">@L["GoToPlace"]</Button>
             </div>
         </CardFooter>
     </Card>
 </div>
 
-<PlaceModal @bind-IsVisible="isArticleModalOpen" 
+<PlaceModal @bind-IsVisible="isPlaceOpen"
             PlaceName="@L[@Place.LandmarkKey]"
             ImageUrl="@($"/images/places_wide/{Place.LandmarkKey}.webp")">
-    <!-- custom text here -->
+    <ChildContent>
+        @((MarkupString)renderedHtml)
+    </ChildContent>
 </PlaceModal>
 
 @code {
     [Parameter]
     public Place Place { get; set; } = default!;
-    private bool isArticleModalOpen = false;
+    private bool isPlaceOpen = false;
+    private string renderedHtml = "";
 
-    private void NavigateToDetails()
+    private async Task OpenPlace()
     {
-        isArticleModalOpen = true;
+        var culture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+        // Uses the ID from data.json
+        var markdown = await ArticleService.GetArticleAsync("Places", Place.LandmarkKey, culture);
+        renderedHtml = Markdig.Markdown.ToHtml(markdown);
+        isPlaceOpen = true;
     }
 }

@@ -14,6 +14,12 @@ namespace RubleAtlas.Web
             // Add services to the container.
             builder.Services.AddSingleton(_ => new JSONStorage(dataFilepath));
 
+            // Register the ArticleProvider
+            string basePath = AppContext.BaseDirectory;
+            builder.Services.AddSingleton<RubleAtlas.Infrastructure.Storage.Markdown.ArticleProvider>(sp =>
+                new RubleAtlas.Infrastructure.Storage.Markdown.ArticleProvider(basePath)
+            );
+
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
                 

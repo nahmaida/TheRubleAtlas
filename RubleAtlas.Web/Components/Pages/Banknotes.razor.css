@@ -1,4 +1,4 @@
-﻿/* -- Core Layout -- */
+﻿/* Core Layout */
 .scroll-wrapper {
     overflow-y: auto;
     height: 100%;
@@ -16,7 +16,7 @@
     font-size: 0.8rem;
 }
 
-/* -- Card Container -- */
+/* Card Container */
 .banknote-card {
     position: relative;
     border-radius: 24px;
@@ -35,7 +35,6 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.03);
     }
 
-/* Subtle background glow based on banknote color */
 .card-glow {
     position: absolute;
     top: -50px;
@@ -57,7 +56,7 @@
     gap: 2.5rem;
 }
 
-/* -- Visuals -- */
+/* Visuals */
 .banknote-visual {
     flex: 0 0 auto;
     display: flex;
@@ -92,7 +91,7 @@
     color: #0d6efd; /* Highlight color on hover */
 }
 
-/* -- Details and Carousel -- */
+/* Details and Carousel */
 .banknote-details {
     flex: 1 1 auto;
     min-width: 0; /* Prevents flexbox overflow issues */
@@ -106,7 +105,7 @@
     letter-spacing: -0.03em;
 }
 
-/* -- Carousel -- */
+/* Carousel */
 .carousel-container {
     position: relative;
     mask-image: linear-gradient(to right, black 85%, transparent 100%);
@@ -152,7 +151,7 @@
         width: 100%;
     }
 
-/* -- Responsive Design -- */
+/* Responsive Design */
 @media (min-width: 992px) {
     .card-content-wrapper {
         flex-direction: row;

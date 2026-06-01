@@ -54,6 +54,7 @@
     <PackageReference Include="Blazor.Bootstrap" Version="3.5.0" />
     <PackageReference Include="Blazor3D" Version="0.1.42" />
     <PackageReference Include="LeafletForBlazor" Version="2.4.0.2" />
+    <PackageReference Include="Markdig" Version="1.2.0" />
     <PackageReference Include="SixLabors.ImageSharp" Version="3.1.12" />
   </ItemGroup>
 
