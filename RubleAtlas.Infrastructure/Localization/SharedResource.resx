@@ -495,4 +495,19 @@
   <data name="DuisAute" xml:space="preserve">
     <value>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</value>
   </data>
+  <data name="CommemorativeNotes" xml:space="preserve">
+    <value>Памятные банкноты</value>
+  </data>
+  <data name="LostBanknotes" xml:space="preserve">
+    <value>«Потерянные» банкноты</value>
+  </data>
+  <data name="Crimea2015" xml:space="preserve">
+    <value>Крым 2015</value>
+  </data>
+  <data name="Sochi2014" xml:space="preserve">
+    <value>Олимпиада в Сочи 2014</value>
+  </data>
+  <data name="WorldCup2018" xml:space="preserve">
+    <value>Чемпионат мира по футболу 2018</value>
+  </data>
 </root>

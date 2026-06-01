@@ -286,6 +286,24 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Памятные банкноты.
+        /// </summary>
+        public static string CommemorativeNotes {
+            get {
+                return ResourceManager.GetString("CommemorativeNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Крым 2015.
+        /// </summary>
+        public static string Crimea2015 {
+            get {
+                return ResourceManager.GetString("Crimea2015", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Источник данных.
         /// </summary>
         public static string Data_Source {
@@ -772,6 +790,15 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to «Потерянные» банкноты.
+        /// </summary>
+        public static string LostBanknotes {
+            get {
+                return ResourceManager.GetString("LostBanknotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Карта.
         /// </summary>
         public static string Map_Page_Title {
@@ -1079,6 +1106,15 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Олимпиада в Сочи 2014.
+        /// </summary>
+        public static string Sochi2014 {
+            get {
+                return ResourceManager.GetString("Sochi2014", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Факты: 10 рублей (1997).
         /// </summary>
         public static string Trivia_RUB10_1997 {
@@ -1192,6 +1228,15 @@ namespace RubleAtlas.Infrastructure.Localization {
         public static string ViewDetails {
             get {
                 return ResourceManager.GetString("ViewDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чемпионат мира по футболу 2018.
+        /// </summary>
+        public static string WorldCup2018 {
+            get {
+                return ResourceManager.GetString("WorldCup2018", resourceCulture);
             }
         }
     }

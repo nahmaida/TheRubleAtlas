@@ -93,6 +93,81 @@
                     </div>
                 }
             </div>
+            <!-- Special Banknotes Section -->
+            <div class="row g-4 justify-content-center mt-5">
+                
+                <!-- Vertical Commemorative Notes -->
+                <div class="col-12 col-xl-5">
+                    <div class="banknote-card text-center h-100" style="background: linear-gradient(-135deg, #ffffff 40%, #209985 140%);">
+                        <h4 class="fw-bold mb-4 tracking-tight">@L["CommemorativeNotes"]</h4>
+                        <div class="d-flex justify-content-center gap-5 gap-md-4 flex-wrap">
+                            
+                            <div class="special-note-wrapper vertical">
+                                <img src="/images/banknotes/rub-100-2014-alt-obverse.jpg"
+                                     class="special-note-img vertical-note"
+                                     alt="100 Rubles 2014 Sochi"
+                                     @onclick='() => OpenSpecialNote("rub-100-2014-alt", 100, 2014)' />
+                                <span class="special-note-title">100 ₽<br /><small>@L["Sochi2014"]</small></span>
+                            </div>
+                            
+                            <div class="special-note-wrapper vertical">
+                                <img src="/images/banknotes/rub-100-2015-alt-obverse.jpg"
+                                     class="special-note-img vertical-note"
+                                     alt="100 Rubles 2015 Crimea"
+                                     @onclick='() => OpenSpecialNote("rub-100-2015-alt", 100, 2015)' />
+                                <span class="special-note-title">100 ₽<br /><small>@L["Crimea2015"]</small></span>
+                            </div>
+                            
+                            <div class="special-note-wrapper vertical">
+                                <img src="/images/banknotes/rub-100-2018-alt-obverse.jpg"
+                                     class="special-note-img vertical-note"
+                                     alt="100 Rubles 2018 World Cup"
+                                     @onclick='() => OpenSpecialNote("rub-100-2018-alt", 100, 2018)' />
+                                <span class="special-note-title">100 ₽<br /><small>@L["WorldCup2018"]</small></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lost Banknotes -->
+                <div class="col-12 col-xl-5">
+                    <div class="banknote-card text-center h-100" style="background: linear-gradient(-135deg, #ffffff 40%, #a68371 140%);">
+                        <h4 class="fw-bold mb-4 tracking-tight">@L["LostBanknotes"]</h4>
+                        <!-- Flex container aligning items to the right -->
+                        <div class="d-flex flex-column gap-4 align-items-end pe-xl-3">
+                            
+                            <div class="special-note-wrapper horizontal">
+                                <div class="text-end pe-4">
+                                    <h2 class="denomination-title">1000 ₽</h2>
+                                    <span class="badge rounded-pill text-bg-light border text-secondary fw-medium px-3 py-2">
+                                        @string.Format(L["SeriesFormat"].Value, 1995)
+                                    </span>
+                                </div>
+                                <img src="/images/banknotes/rub-1000-1995-alt-obverse.jpg"
+                                     class="special-note-img horizontal-note"
+                                     alt="1000 Rubles 1995"
+                                     @onclick='() => OpenSpecialNote("rub-1000-1995-alt", 1000, 1995)' />
+                            </div>
+                            
+                            <div class="special-note-wrapper horizontal">
+                                <div class="text-end pe-4">
+                                    <h2 class="denomination-title">1000 ₽</h2>
+                                    <span class="badge rounded-pill text-bg-light border text-secondary fw-medium px-3 py-2">
+                                        @string.Format(L["SeriesFormat"].Value, 2023)
+                                    </span>
+                                </div>
+                                <img src="/images/banknotes/rub-1000-2023-alt-reverse.jpg"
+                                     class="special-note-img horizontal-note"
+                                     alt="1000 Rubles 2023 Cancelled"
+                                     @onclick='() => OpenSpecialNote("rub-1000-2023-alt", 1000, 2023)' />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         }
     </div>
 </div>
@@ -122,5 +197,13 @@
         var markdown = await ArticleService.GetArticleAsync("Banknotes", note.Name, culture);
         renderedHtml = Markdig.Markdown.ToHtml(markdown);
         isNoteOpen = true;
+    }
+
+    private async Task OpenSpecialNote(string name, int denomination, int year)
+    {
+        // Constructs a lightweight model to satisfy the modal binding and markdown fetcher
+        var specialNote = new Banknote(name, denomination, year, "#f8f9fa", null, null);
+        
+        await OpenBanknote(specialNote);
     }
 }
