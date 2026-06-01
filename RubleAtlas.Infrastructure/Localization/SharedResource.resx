@@ -259,7 +259,7 @@
     <value>Часовня Казанской Богоматери</value>
   </data>
   <data name="Landmark.RUB1000.1997.Obverse.YaroslavlKremlin" xml:space="preserve">
-    <value>Ярославский кремль</value>
+    <value>Спасо-Преображенский монастырь</value>
   </data>
   <data name="Landmark.RUB1000.2025.Obverse.NikolskayaTowerNNKremlin" xml:space="preserve">
     <value>Никольская башня Нижегородского кремля</value>
@@ -526,57 +526,57 @@
     <value>100₽ 2018</value>
   </data>
   <data name="Coins_Page_Title_Long" xml:space="preserve">
-  <value>Монеты Российской Федерации</value>
-</data>
-<data name="Coins_Hero_Title" xml:space="preserve">
-  <value>Рублёвые монеты</value>
-</data>
-<data name="Coins_Hero_Subtitle" xml:space="preserve">
-  <value>В то время как Атлас отражает географию на банкнотах России, монеты служат повседневной основой денежной системы. Познакомьтесь с общим дизайном современных монет.</value>
-</data>
-<data name="Circulating_Denominations" xml:space="preserve">
-  <value>Монеты в обращении</value>
-</data>
-<data name="Denom_1_Ruble" xml:space="preserve">
-  <value>1 рубль</value>
-</data>
-<data name="Denom_2_Rubles" xml:space="preserve">
-  <value>2 рубля</value>
-</data>
-<data name="Denom_5_Rubles" xml:space="preserve">
-  <value>5 рублей</value>
-</data>
-<data name="Denom_10_Rubles" xml:space="preserve">
-  <value>10 рублей</value>
-</data>
-<data name="Material_Nickel_Steel" xml:space="preserve">
-  <value>Сталь с никелевым гальванопокрытием</value>
-</data>
-<data name="Material_Brass_Steel" xml:space="preserve">
-  <value>Сталь с латунным гальванопокрытием</value>
-</data>
-<data name="Badge_Design_Feature" xml:space="preserve">
-  <value>Элемент дизайна</value>
-</data>
-<data name="Badge_Historical_Shift" xml:space="preserve">
-  <value>Исторические изменения</value>
-</data>
-<data name="Feature_Mintmarks_Title" xml:space="preserve">
-  <value>Монетные дворы</value>
-</data>
-<data name="Feature_Mintmarks_Desc" xml:space="preserve">
-  <value>Каждая монета в обращении снабжена микроскопическим монограммным клеймом под правой лапой орла (на аверсе), указывающим место чеканки:</value>
-</data>
-<data name="Mint_Moscow" xml:space="preserve">
-  <value>Московский монетный двор (ММД)</value>
-</data>
-<data name="Mint_StPetersburg" xml:space="preserve">
-  <value>Санкт-Петербургский монетный двор (СПМД)</value>
-</data>
-<data name="Feature_Eagle_Title" xml:space="preserve">
-  <value>Двуглавый орёл</value>
-</data>
-<data name="Feature_Eagle_Desc" xml:space="preserve">
-  <value>На монетах образца 1992–2015 годов изображалась эмблема Банка России (орёл без корон и скипетра). Начиная с 2016 года на всех новых монетах чеканится официальный Государственный герб Российской Федерации.</value>
-</data>
+    <value>Монеты Российской Федерации</value>
+  </data>
+  <data name="Coins_Hero_Title" xml:space="preserve">
+    <value>Рублёвые монеты</value>
+  </data>
+  <data name="Coins_Hero_Subtitle" xml:space="preserve">
+    <value>В то время как Атлас отражает географию на банкнотах России, монеты служат повседневной основой денежной системы. Познакомьтесь с общим дизайном современных монет.</value>
+  </data>
+  <data name="Circulating_Denominations" xml:space="preserve">
+    <value>Монеты в обращении</value>
+  </data>
+  <data name="Denom_1_Ruble" xml:space="preserve">
+    <value>1 рубль</value>
+  </data>
+  <data name="Denom_2_Rubles" xml:space="preserve">
+    <value>2 рубля</value>
+  </data>
+  <data name="Denom_5_Rubles" xml:space="preserve">
+    <value>5 рублей</value>
+  </data>
+  <data name="Denom_10_Rubles" xml:space="preserve">
+    <value>10 рублей</value>
+  </data>
+  <data name="Material_Nickel_Steel" xml:space="preserve">
+    <value>Сталь с никелевым гальванопокрытием</value>
+  </data>
+  <data name="Material_Brass_Steel" xml:space="preserve">
+    <value>Сталь с латунным гальванопокрытием</value>
+  </data>
+  <data name="Badge_Design_Feature" xml:space="preserve">
+    <value>Элемент дизайна</value>
+  </data>
+  <data name="Badge_Historical_Shift" xml:space="preserve">
+    <value>Исторические изменения</value>
+  </data>
+  <data name="Feature_Mintmarks_Title" xml:space="preserve">
+    <value>Монетные дворы</value>
+  </data>
+  <data name="Feature_Mintmarks_Desc" xml:space="preserve">
+    <value>Каждая монета в обращении снабжена микроскопическим монограммным клеймом под правой лапой орла (на аверсе), указывающим место чеканки:</value>
+  </data>
+  <data name="Mint_Moscow" xml:space="preserve">
+    <value>Московский монетный двор (ММД)</value>
+  </data>
+  <data name="Mint_StPetersburg" xml:space="preserve">
+    <value>Санкт-Петербургский монетный двор (СПМД)</value>
+  </data>
+  <data name="Feature_Eagle_Title" xml:space="preserve">
+    <value>Двуглавый орёл</value>
+  </data>
+  <data name="Feature_Eagle_Desc" xml:space="preserve">
+    <value>На монетах образца 1992–2015 годов изображалась эмблема Банка России (орёл без корон и скипетра). Начиная с 2016 года на всех новых монетах чеканится официальный Государственный герб Российской Федерации.</value>
+  </data>
 </root>

@@ -70,6 +70,24 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Элемент дизайна.
+        /// </summary>
+        public static string Badge_Design_Feature {
+            get {
+                return ResourceManager.GetString("Badge_Design_Feature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Исторические изменения.
+        /// </summary>
+        public static string Badge_Historical_Shift {
+            get {
+                return ResourceManager.GetString("Badge_Historical_Shift", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ЦБ РФ.
         /// </summary>
         public static string Bank_of_Russia {
@@ -102,6 +120,15 @@ namespace RubleAtlas.Infrastructure.Localization {
         public static string BanknotesQuote {
             get {
                 return ResourceManager.GetString("BanknotesQuote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Монеты в обращении.
+        /// </summary>
+        public static string Circulating_Denominations {
+            get {
+                return ResourceManager.GetString("Circulating_Denominations", resourceCulture);
             }
         }
         
@@ -277,11 +304,38 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to В то время как Атлас отражает географию на банкнотах России, монеты служат повседневной основой денежной системы. Познакомьтесь с общим дизайном современных монет..
+        /// </summary>
+        public static string Coins_Hero_Subtitle {
+            get {
+                return ResourceManager.GetString("Coins_Hero_Subtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Рублёвые монеты.
+        /// </summary>
+        public static string Coins_Hero_Title {
+            get {
+                return ResourceManager.GetString("Coins_Hero_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Монеты.
         /// </summary>
         public static string Coins_Page_Title {
             get {
                 return ResourceManager.GetString("Coins_Page_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Монеты Российской Федерации.
+        /// </summary>
+        public static string Coins_Page_Title_Long {
+            get {
+                return ResourceManager.GetString("Coins_Page_Title_Long", resourceCulture);
             }
         }
         
@@ -309,6 +363,42 @@ namespace RubleAtlas.Infrastructure.Localization {
         public static string Data_Source {
             get {
                 return ResourceManager.GetString("Data_Source", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 рубль.
+        /// </summary>
+        public static string Denom_1_Ruble {
+            get {
+                return ResourceManager.GetString("Denom_1_Ruble", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10 рублей.
+        /// </summary>
+        public static string Denom_10_Rubles {
+            get {
+                return ResourceManager.GetString("Denom_10_Rubles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2 рубля.
+        /// </summary>
+        public static string Denom_2_Rubles {
+            get {
+                return ResourceManager.GetString("Denom_2_Rubles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5 рублей.
+        /// </summary>
+        public static string Denom_5_Rubles {
+            get {
+                return ResourceManager.GetString("Denom_5_Rubles", resourceCulture);
             }
         }
         
@@ -345,6 +435,42 @@ namespace RubleAtlas.Infrastructure.Localization {
         public static string ExploreBanknotesSubtitle {
             get {
                 return ResourceManager.GetString("ExploreBanknotesSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to На монетах образца 1992–2015 годов изображалась эмблема Банка России (орёл без корон и скипетра). Начиная с 2016 года на всех новых монетах чеканится официальный Государственный герб Российской Федерации..
+        /// </summary>
+        public static string Feature_Eagle_Desc {
+            get {
+                return ResourceManager.GetString("Feature_Eagle_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Двуглавый орёл.
+        /// </summary>
+        public static string Feature_Eagle_Title {
+            get {
+                return ResourceManager.GetString("Feature_Eagle_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Каждая монета в обращении снабжена микроскопическим монограммным клеймом под правой лапой орла (на аверсе), указывающим место чеканки:.
+        /// </summary>
+        public static string Feature_Mintmarks_Desc {
+            get {
+                return ResourceManager.GetString("Feature_Mintmarks_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Монетные дворы.
+        /// </summary>
+        public static string Feature_Mintmarks_Title {
+            get {
+                return ResourceManager.GetString("Feature_Mintmarks_Title", resourceCulture);
             }
         }
         
@@ -493,7 +619,7 @@ namespace RubleAtlas.Infrastructure.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ярославский кремль.
+        ///   Looks up a localized string similar to Спасо-Преображенский монастырь.
         /// </summary>
         public static string Landmark_RUB1000_1997_Obverse_YaroslavlKremlin {
             get {
@@ -804,6 +930,42 @@ namespace RubleAtlas.Infrastructure.Localization {
         public static string Map_Page_Title {
             get {
                 return ResourceManager.GetString("Map_Page_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сталь с латунным гальванопокрытием.
+        /// </summary>
+        public static string Material_Brass_Steel {
+            get {
+                return ResourceManager.GetString("Material_Brass_Steel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сталь с никелевым гальванопокрытием.
+        /// </summary>
+        public static string Material_Nickel_Steel {
+            get {
+                return ResourceManager.GetString("Material_Nickel_Steel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Московский монетный двор (ММД).
+        /// </summary>
+        public static string Mint_Moscow {
+            get {
+                return ResourceManager.GetString("Mint_Moscow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Санкт-Петербургский монетный двор (СПМД).
+        /// </summary>
+        public static string Mint_StPetersburg {
+            get {
+                return ResourceManager.GetString("Mint_StPetersburg", resourceCulture);
             }
         }
         
